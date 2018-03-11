@@ -15,6 +15,7 @@ def getSecondBalance(secondDataSymbol):
 
 def triArb(firstSymbol, firstAsk, secondSymbol, secondAsk, thirdSymbol, thirdBid, maxAmount, endingBalance):
     print(firstSymbol, secondSymbol, thirdSymbol, maxAmount)
+    buyStart = time.time()
     triangle = True
     beginningBalance = client.get_asset_balance(asset='BTC')
     while(triangle == True):
@@ -55,6 +56,8 @@ def triArb(firstSymbol, firstAsk, secondSymbol, secondAsk, thirdSymbol, thirdBid
         "Actual Profit": actualProfit,
         "Expected Profit": expectedProfit
     }
+    buyEnd = time.time()
+    print("Buy time: ", buyStart - buyEnd)
     return arbitrageStats
 
 
