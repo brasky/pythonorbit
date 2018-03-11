@@ -17,24 +17,26 @@ def triArb(firstSymbol, firstAsk, secondSymbol, secondAsk, thirdSymbol, thirdBid
     print(firstSymbol, secondSymbol, thirdSymbol, maxAmount)
     orderOne = client.create_test_order(
         symbol= firstSymbol,
-        side=SIDE_BUY,
+        side='BUY',
         type='MARKET',
         timeInForce='FOK',
         quantity= maxAmount,
         price= firstAsk)
+    secondAmount = client.get_asset_balance(asset=firstSymbol[:3])
     orderTwo = client.create_test_order(
         symbol= secondSymbol,
-        side=SIDE_BUY,
+        side='BUY',
         type='MARKET',
         timeInForce='FOK',
-        quantity=maxAmount,
+        quantity=secondAmount,
         price=secondAsk)
+    thirdAmount = client.get_asset_balance(asset=firstSymbol[:3])
     orderThree = client.create_test_order(
         symbol= thirdSymbol,
-        side=SIDE_SELL,
+        side='SELL',
         type='MARKET',
         timeInForce='FOK',
-        quantity=maxAmount,
+        quantity=thirdAmount,
         price=thirdBid)
     print(orderOne)
     print(orderTwo)
