@@ -16,7 +16,7 @@ def getSecondBalance(secondDataSymbol):
 def triArb(firstSymbol, firstAsk, secondSymbol, secondAsk, thirdSymbol, thirdBid, maxAmount, endingBalance):
     print(firstSymbol, secondSymbol, thirdSymbol, maxAmount)
     triangle = True
-    beginningBalance = float(client.get_asset_balance(asset='BTC'))
+    beginningBalance = client.get_asset_balance(asset='BTC')
     while(triangle == True):
 
         orderOne = client.create_test_order(
