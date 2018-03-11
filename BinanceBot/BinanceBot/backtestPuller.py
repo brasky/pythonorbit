@@ -13,9 +13,10 @@ def getSecondBalance(secondDataSymbol):
             if dict['symbol'] == secondDataSymbol:
                 return dict['maxThruTwo']
 
-def triArb(firstSymbol, firstAsk, secondSymbol, secondAsk, thirdSymbol, thirdBid, maxAmount):
+def triArb(firstSymbol, firstAsk, secondSymbol, secondAsk, thirdSymbol, thirdBid, maxAmount, endingBalance):
     print(firstSymbol, secondSymbol, thirdSymbol, maxAmount)
     triangle = True
+    beginningBalance = float(client.get_asset_balance(asset='BTC'))
     while(triangle == True):
 
         orderOne = client.create_test_order(
@@ -47,7 +48,14 @@ def triArb(firstSymbol, firstAsk, secondSymbol, secondAsk, thirdSymbol, thirdBid
                 price=thirdBid)
             print(orderThree)
             triangle = False
-    return "Purchase Complete"
+    finalBalance = float(client.get_asset_balance(asset='BTC'))
+    actualProfit = beginningBalance - finalBalance
+    expectedProfit = endingBalance - 1
+    arbitrageStats = {
+        "Actual Profit": actualProfit,
+        "Expected Profit": expectedProfit
+    }
+    return arbitrageStats
 
 
 with open("bnbdata.csv", "w") as result:
@@ -109,7 +117,8 @@ with open("bnbdata.csv", "w") as result:
                         if thirdBalance['Ending Balance'] > 1 and thirdBalance['maxThruFinal'] > 0.005:
                             secondAsk = float((item for item in tickers if item['symbol'] == secondBalance['symbol']).next()['askPrice'])
                             thirdBid = float((item for item in tickers if item['symbol'] == thirdBalance['symbol']).next()['bidPrice'])
-                            triArb('BNBBTC', firstAsk, secondBalance['symbol'], secondAsk, thirdBalance['symbol'], thirdBid, thirdBalance['maxThruFinal'])
+                            results = triArb('BNBBTC', firstAsk, secondBalance['symbol'], secondAsk, thirdBalance['symbol'], thirdBid, thirdBalance['maxThruFinal'], thirdBalance['Ending Balance'])
+                            print('results: ', results)
                             quit()
                         #print(x['symbol'])
                         #print("bid price is", y['bidPrice'])
