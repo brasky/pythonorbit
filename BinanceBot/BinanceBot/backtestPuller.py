@@ -12,7 +12,7 @@ def getSecondBalance(secondDataSymbol):
             #print(dict)
             if dict['symbol'] == secondDataSymbol:
                 return dict['maxThruTwo']
-
+#comment
 def triArb(firstSymbol, firstAsk, secondSymbol, secondAsk, thirdSymbol, thirdBid, maxAmount, endingBalance):
     print(firstSymbol, secondSymbol, thirdSymbol, maxAmount)
     buyStart = time.time()
