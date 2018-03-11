@@ -97,7 +97,9 @@ with open("bnbdata.csv", "w") as result:
                             "maxThruFinal": min(maxThruOne, maxThruTwo, maxThruThree)
                         }
                         if thirdBalance['Ending Balance'] > 1 and thirdBalance['maxThruFinal'] > 0.005:
-                            triArb('BNBBTC', secondBalance['symbol'], thirdBalance['symbol'], thirdBalance['maxThruFinal'])
+                            secondAsk = float((item for item in tickers if item['symbol'] == secondBalance['symbol']).next()['askPrice'])
+                            thirdBid = float((item for item in tickers if item['symbol'] == thirdBalance['symbol']).next()['bidPrice'])
+                            triArb('BNBBTC', firstAsk, secondBalance['symbol'], secondAsk, thirdBalance['symbol'], thirdBid, thirdBalance['maxThruFinal'])
                             quit()
                         #print(x['symbol'])
                         #print("bid price is", y['bidPrice'])
@@ -113,7 +115,7 @@ with open("bnbdata.csv", "w") as result:
 
         end = time.time()
         print(thirdData)
-        print(end - start)
-       #print(tickers)
+        #print(end - start)
+        #print(tickers)
 
         time.sleep(2)
