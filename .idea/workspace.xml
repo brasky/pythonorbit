@@ -1,447 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28a34458-6534-40d5-ac3b-e2716a13380c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/bin/python3.5" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/.libs_cffi_backend/libffi-d78936b1.so.6.0.4" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/bindings/_constant_time.abi3.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/bindings/_openssl.abi3.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/bindings/_padding.abi3.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/distlib/t32.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/distlib/t64.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/distlib/w32.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/distlib/w64.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/.idea/BinanceBot.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/.idea/BinanceBot.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/.idea/libraries/R_User_Library.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/.~lock.bnbdata.csv#" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/.~lock.data.csv#" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/backtestPuller.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/backtesting.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/bnbdata.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/data.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/dataPuller.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/parameters.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/table.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/test.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/bin/activate" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/bin/activate.csh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/bin/activate.fish" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/bin/activate_this.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/bin/automat-visualize" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/bin/easy_install" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/bin/easy_install-3.5" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/bin/pip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/bin/pip3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/bin/pip3.5" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/bin/python" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/bin/python-config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/bin/python3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/bin/wheel" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/include/python3.5m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/abc.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/base64.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/bisect.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/codecs.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/collections" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/config-3.5m-x86_64-linux-gnu" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/copy.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/copyreg.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/distutils/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/distutils/distutils.cfg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/encodings" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/fnmatch.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/functools.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/genericpath.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/hashlib.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/heapq.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/hmac.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/imp.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/importlib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/io.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/keyword.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/lib-dynload" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/linecache.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/locale.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/no-global-site-packages.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/ntpath.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/operator.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/orig-prefix.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/os.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/plat-x86_64-linux-gnu" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/posixpath.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/random.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/re.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/reprlib.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/rlcompleter.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/shutil.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/Automat-0.6.0.dist-info/DESCRIPTION.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/Automat-0.6.0.dist-info/INSTALLER" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/Automat-0.6.0.dist-info/METADATA" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/Automat-0.6.0.dist-info/RECORD" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/Automat-0.6.0.dist-info/WHEEL" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/Automat-0.6.0.dist-info/entry_points.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/Automat-0.6.0.dist-info/metadata.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/Automat-0.6.0.dist-info/top_level.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/OpenSSL/SSL.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/OpenSSL/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/OpenSSL/_util.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/OpenSSL/crypto.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/OpenSSL/debug.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/OpenSSL/rand.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/OpenSSL/tsafe.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/OpenSSL/version.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto-0.24.0.dist-info/DESCRIPTION.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto-0.24.0.dist-info/INSTALLER" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto-0.24.0.dist-info/METADATA" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto-0.24.0.dist-info/RECORD" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto-0.24.0.dist-info/WHEEL" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto-0.24.0.dist-info/metadata.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto-0.24.0.dist-info/top_level.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto/_elliptic_curve.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto/_errors.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto/_ffi.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto/_inet.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto/_int.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto/_iri.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto/_ordereddict.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto/_perf/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto/_perf/_big_num_ctypes.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto/_teletex_codec.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto/_types.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto/algos.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto/cms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto/core.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto/crl.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto/csr.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto/keys.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto/ocsp.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto/parser.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto/pdf.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto/pem.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto/pkcs12.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto/tsp.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto/util.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto/version.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/asn1crypto/x509.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/attr/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/attr/_compat.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/attr/_config.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/attr/_funcs.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/attr/_make.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/attr/converters.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/attr/exceptions.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/attr/filters.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/attr/validators.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/attrs-17.4.0.dist-info/DESCRIPTION.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/attrs-17.4.0.dist-info/INSTALLER" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/attrs-17.4.0.dist-info/LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/attrs-17.4.0.dist-info/METADATA" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/attrs-17.4.0.dist-info/RECORD" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/attrs-17.4.0.dist-info/WHEEL" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/attrs-17.4.0.dist-info/metadata.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/attrs-17.4.0.dist-info/top_level.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/automat/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/automat/_core.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/automat/_discover.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/automat/_introspection.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/automat/_methodical.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/automat/_test/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/automat/_test/test_core.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/automat/_test/test_discover.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/automat/_test/test_methodical.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/automat/_test/test_trace.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/automat/_test/test_visualize.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/automat/_visualize.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cffi-1.11.2.dist-info/DESCRIPTION.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cffi-1.11.2.dist-info/INSTALLER" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cffi-1.11.2.dist-info/METADATA" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cffi-1.11.2.dist-info/RECORD" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cffi-1.11.2.dist-info/WHEEL" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cffi-1.11.2.dist-info/entry_points.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cffi-1.11.2.dist-info/metadata.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cffi-1.11.2.dist-info/top_level.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cffi/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cffi/_cffi_errors.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cffi/_cffi_include.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cffi/_embedding.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cffi/api.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cffi/backend_ctypes.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cffi/cffi_opcode.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cffi/commontypes.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cffi/cparser.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cffi/error.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cffi/ffiplatform.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cffi/lock.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cffi/model.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cffi/parse_c_type.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cffi/recompiler.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cffi/setuptools_ext.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cffi/vengine_cpy.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cffi/vengine_gen.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cffi/verifier.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/constantly-15.1.0.dist-info/DESCRIPTION.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/constantly-15.1.0.dist-info/INSTALLER" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/constantly-15.1.0.dist-info/METADATA" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/constantly-15.1.0.dist-info/RECORD" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/constantly-15.1.0.dist-info/WHEEL" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/constantly-15.1.0.dist-info/metadata.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/constantly-15.1.0.dist-info/pbr.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/constantly-15.1.0.dist-info/top_level.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/constantly/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/constantly/_constants.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/constantly/_version.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography-2.1.4.dist-info/DESCRIPTION.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography-2.1.4.dist-info/INSTALLER" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography-2.1.4.dist-info/METADATA" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography-2.1.4.dist-info/RECORD" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography-2.1.4.dist-info/WHEEL" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography-2.1.4.dist-info/metadata.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography-2.1.4.dist-info/top_level.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/__about__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/exceptions.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/fernet.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/backends/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/backends/interfaces.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/backends/openssl/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/backends/openssl/aead.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/backends/openssl/backend.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/backends/openssl/ciphers.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/backends/openssl/cmac.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/backends/openssl/decode_asn1.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/backends/openssl/dh.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/backends/openssl/dsa.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/backends/openssl/ec.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/backends/openssl/encode_asn1.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/backends/openssl/hashes.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/backends/openssl/hmac.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/backends/openssl/rsa.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/backends/openssl/utils.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/backends/openssl/x25519.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/backends/openssl/x509.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/bindings/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/bindings/openssl/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/bindings/openssl/_conditional.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/bindings/openssl/binding.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/asymmetric/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/asymmetric/dh.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/asymmetric/dsa.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/asymmetric/ec.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/asymmetric/padding.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/asymmetric/rsa.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/asymmetric/utils.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/asymmetric/x25519.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/ciphers/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/ciphers/aead.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/ciphers/algorithms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/ciphers/base.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/ciphers/modes.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/cmac.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/constant_time.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/hashes.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/hmac.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/kdf/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/kdf/concatkdf.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/kdf/hkdf.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/kdf/kbkdf.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/kdf/pbkdf2.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/kdf/scrypt.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/kdf/x963kdf.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/keywrap.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/mac.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/padding.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/serialization.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/twofactor/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/twofactor/hotp.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/twofactor/totp.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/hazmat/primitives/twofactor/utils.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/utils.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/x509/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/x509/base.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/x509/certificate_transparency.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/x509/extensions.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/x509/general_name.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/x509/name.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/cryptography/x509/oid.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/easy_install.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/exampleproj/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/exampleproj/_version.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/hyperlink-17.3.1.dist-info/DESCRIPTION.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/hyperlink-17.3.1.dist-info/INSTALLER" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/hyperlink-17.3.1.dist-info/METADATA" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/hyperlink-17.3.1.dist-info/RECORD" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/hyperlink-17.3.1.dist-info/WHEEL" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/hyperlink-17.3.1.dist-info/metadata.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/hyperlink-17.3.1.dist-info/top_level.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/hyperlink/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/hyperlink/_url.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/hyperlink/test/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/hyperlink/test/common.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/hyperlink/test/test_common.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/hyperlink/test/test_scheme_registration.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/hyperlink/test/test_url.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/idna-2.6.dist-info/DESCRIPTION.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/idna-2.6.dist-info/INSTALLER" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/idna-2.6.dist-info/METADATA" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/idna-2.6.dist-info/RECORD" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/idna-2.6.dist-info/WHEEL" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/idna-2.6.dist-info/metadata.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/idna-2.6.dist-info/top_level.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/idna/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/idna/codec.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/idna/compat.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/idna/core.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/idna/idnadata.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/idna/intranges.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/idna/package_data.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/idna/uts46data.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/incremental-17.5.0.dist-info/DESCRIPTION.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/incremental-17.5.0.dist-info/INSTALLER" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/incremental-17.5.0.dist-info/METADATA" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/incremental-17.5.0.dist-info/RECORD" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/incremental-17.5.0.dist-info/WHEEL" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/incremental-17.5.0.dist-info/entry_points.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/incremental-17.5.0.dist-info/metadata.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/incremental-17.5.0.dist-info/top_level.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/incremental/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/incremental/_version.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/incremental/tests/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/incremental/tests/test_update.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/incremental/tests/test_version.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/incremental/update.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip-9.0.1.dist-info/DESCRIPTION.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip-9.0.1.dist-info/INSTALLER" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip-9.0.1.dist-info/METADATA" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip-9.0.1.dist-info/RECORD" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip-9.0.1.dist-info/WHEEL" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip-9.0.1.dist-info/entry_points.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip-9.0.1.dist-info/metadata.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip-9.0.1.dist-info/top_level.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/appdirs.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/cachecontrol/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/cachecontrol/_cmd.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/cachecontrol/adapter.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/cachecontrol/cache.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/cachecontrol/caches/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/cachecontrol/caches/file_cache.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/cachecontrol/caches/redis_cache.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/cachecontrol/compat.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/cachecontrol/controller.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/cachecontrol/filewrapper.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/cachecontrol/heuristics.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/cachecontrol/serialize.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/cachecontrol/wrapper.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/colorama/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/colorama/ansi.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/colorama/ansitowin32.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/colorama/initialise.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/colorama/win32.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/colorama/winterm.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/distlib/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/distlib/_backport/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/distlib/_backport/misc.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/distlib/_backport/shutil.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/distlib/_backport/sysconfig.cfg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/distlib/_backport/sysconfig.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/distlib/_backport/tarfile.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/distlib/compat.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/distlib/database.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/distlib/index.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/distlib/locators.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/distlib/manifest.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/distlib/markers.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/distlib/metadata.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/distlib/resources.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/distlib/scripts.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/distlib/util.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/distlib/version.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/distlib/wheel.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/distro.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/html5lib/constants.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/html5lib/filters/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/html5lib/filters/alphabeticalattributes.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/html5lib/filters/base.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/html5lib/filters/inject_meta_charset.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/html5lib/filters/lint.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/html5lib/filters/optionaltags.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/html5lib/filters/sanitizer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/html5lib/filters/whitespace.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/html5lib/html5parser.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/html5lib/serializer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/html5lib/treeadapters/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/html5lib/treeadapters/genshi.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/html5lib/treeadapters/sax.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/html5lib/treebuilders/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/html5lib/treebuilders/base.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/html5lib/treebuilders/dom.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/html5lib/treebuilders/etree.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/_vendor/html5lib/treebuilders/etree_lxml.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/basecommand.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/baseparser.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/cmdoptions.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/commands/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/commands/check.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/commands/completion.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/commands/download.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/commands/freeze.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/commands/hash.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/commands/help.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/commands/install.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/commands/list.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/commands/search.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/commands/show.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/commands/uninstall.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/commands/wheel.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/compat/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/compat/dictconfig.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/download.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/exceptions.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/index.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/locations.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/models/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/models/index.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/operations/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/operations/check.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/operations/freeze.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/pep425tags.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/req/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/req/req_file.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/req/req_install.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/req/req_set.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/req/req_uninstall.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/status_codes.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/utils/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/utils/appdirs.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/utils/build.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/utils/deprecation.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/utils/encoding.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/utils/filesystem.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/utils/glibc.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/utils/hashes.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/utils/logging.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/utils/outdated.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/utils/packaging.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/utils/setuptools_build.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/utils/ui.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/vcs/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/vcs/bazaar.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/vcs/git.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/vcs/mercurial.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/vcs/subversion.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/venv/lib/python3.5/site-packages/pip/wheel.py" />
-    </list>
+    <list default="true" id="28a34458-6534-40d5-ac3b-e2716a13380c" name="Default" comment="" />
     <ignored path="pythonorbit.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -482,6 +42,46 @@
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pythonorbit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pythonorbit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pythonorbit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -491,6 +91,59 @@
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="GAPID_DISABLE_PCS" value="false" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method>
+        <option name="Make" enabled="true" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="GAPID_DISABLE_PCS" value="false" />
+      </Profilers>
+      <method>
+        <option name="Make" enabled="true" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
@@ -515,6 +168,22 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -536,12 +205,126 @@
       <patterns />
       <method />
     </configuration>
+    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="pythonorbit" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pythonorbit" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -572,6 +355,166 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pythonorbit" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pythonorbit" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pythonorbit" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pythonorbit" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pythonorbit" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pythonorbit" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
   </component>
   <component name="SbtLocalSettings">
     <option name="externalProjectsViewState">
@@ -580,6 +523,9 @@
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -606,7 +552,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
