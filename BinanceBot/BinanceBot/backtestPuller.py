@@ -15,32 +15,40 @@ def getSecondBalance(secondDataSymbol):
 
 def triArb(firstSymbol, firstAsk, secondSymbol, secondAsk, thirdSymbol, thirdBid, maxAmount):
     print(firstSymbol, secondSymbol, thirdSymbol, maxAmount)
-    orderOne = client.create_test_order(
-        symbol= firstSymbol,
-        side='BUY',
-        type='MARKET',
-        timeInForce='FOK',
-        quantity= maxAmount,
-        price= firstAsk)
-    secondAmount = client.get_asset_balance(asset=firstSymbol[:3])
-    orderTwo = client.create_test_order(
-        symbol= secondSymbol,
-        side='BUY',
-        type='MARKET',
-        timeInForce='FOK',
-        quantity=secondAmount,
-        price=secondAsk)
-    thirdAmount = client.get_asset_balance(asset=firstSymbol[:3])
-    orderThree = client.create_test_order(
-        symbol= thirdSymbol,
-        side='SELL',
-        type='MARKET',
-        timeInForce='FOK',
-        quantity=thirdAmount,
-        price=thirdBid)
-    print(orderOne)
-    print(orderTwo)
-    print(orderThree)
+    triangle = True
+    while(triangle == True):
+
+        orderOne = client.create_test_order(
+            symbol= firstSymbol,
+            side='BUY',
+            type='MARKET',
+            timeInForce='FOK',
+            quantity= maxAmount,
+            price= firstAsk)
+        print(orderOne)
+        if(client.get_asset_balance(asset=firstSymbol[:3] > 0)):
+            secondAmount = client.get_asset_balance(asset=firstSymbol[:3])
+            orderTwo = client.create_test_order(
+                symbol= secondSymbol,
+                side='BUY',
+                type='MARKET',
+                timeInForce='FOK',
+                quantity=secondAmount,
+                price=secondAsk)
+            print(orderTwo)
+        if(client.get_asset_balance(asset=firstSymbol[:3])):
+            thirdAmount = client.get_asset_balance(asset=firstSymbol[:3])
+            orderThree = client.create_test_order(
+                symbol= thirdSymbol,
+                side='SELL',
+                type='MARKET',
+                timeInForce='FOK',
+                quantity=thirdAmount,
+                price=thirdBid)
+            print(orderThree)
+            triangle = False
+    return "Purchase Complete"
+
 
 with open("bnbdata.csv", "w") as result:
     wr = csv.writer(result, dialect='excel', delimiter=',')
