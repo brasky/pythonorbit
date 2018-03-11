@@ -18,16 +18,16 @@ def triArb(firstSymbol, firstAsk, secondSymbol, secondAsk, thirdSymbol, thirdBid
     buyStart = time.time()
     triangle = True
     beginningBalance = client.get_asset_balance(asset='BTC')
-    while(triangle == True):
+    orderOne = client.create_test_order(
+        symbol= firstSymbol,
+        side='BUY',
+        type='MARKET',
+        timeInForce='FOK',
+        quantity= maxAmount,
+        price= firstAsk)
+    print(orderOne)
 
-        orderOne = client.create_test_order(
-            symbol= firstSymbol,
-            side='BUY',
-            type='MARKET',
-            timeInForce='FOK',
-            quantity= maxAmount,
-            price= firstAsk)
-        print(orderOne)
+    while(triangle == True):
         if(client.get_asset_balance(asset=firstSymbol[:3] > 0)):
             secondAmount = client.get_asset_balance(asset=firstSymbol[:3])
             orderTwo = client.create_test_order(
@@ -38,7 +38,7 @@ def triArb(firstSymbol, firstAsk, secondSymbol, secondAsk, thirdSymbol, thirdBid
                 quantity=secondAmount,
                 price=secondAsk)
             print(orderTwo)
-        if(client.get_asset_balance(asset=firstSymbol[:3])):
+        if(client.get_asset_balance(asset=secondSymbol[:3]) > 0):
             thirdAmount = client.get_asset_balance(asset=firstSymbol[:3])
             orderThree = client.create_test_order(
                 symbol= thirdSymbol,
