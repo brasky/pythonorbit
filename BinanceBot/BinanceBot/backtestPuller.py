@@ -117,10 +117,11 @@ with open("bnbdata.csv", "w") as result:
                             "Ending Balance": float(x['qty']) * ((float(y['bidPrice'])/1.001)),
                             "maxThruFinal": min(maxThruOne, maxThruTwo, maxThruThree)
                         }
+
                         if thirdBalance['Ending Balance'] > 1 and thirdBalance['maxThruFinal'] > 0.002:
-                            secondAsk = float((item for item in tickers if item['symbol'] == secondBalance['symbol']).next()['askPrice'])
+                            secondAsk = float((item for item in tickers if item['symbol'] == x['symbol']).next()['askPrice'])
                             thirdBid = float((item for item in tickers if item['symbol'] == thirdBalance['symbol']).next()['bidPrice'])
-                            results = triArb('BNBBTC', firstAsk, secondBalance['symbol'], secondAsk, thirdBalance['symbol'], thirdBid, thirdBalance['maxThruFinal'], thirdBalance['Ending Balance'])
+                            results = triArb('BNBBTC', firstAsk, x['symbol'], secondAsk, thirdBalance['symbol'], thirdBid, thirdBalance['maxThruFinal'], thirdBalance['Ending Balance'])
                             print('results: ', results)
                             quit()
                         #print(x['symbol'])
