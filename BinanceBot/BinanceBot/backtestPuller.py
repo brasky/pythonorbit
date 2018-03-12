@@ -113,7 +113,7 @@ with open("bnbdata.csv", "w") as result:
                         maxThruTwo = float(getSecondBalance(symbol))
                         #print(secondData)
                         thirdBalance = {
-                            "symbol": x['symbol'],
+                            "symbol": y['symbol'],
                             "Ending Balance": float(x['qty']) * ((float(y['bidPrice'])/1.001)),
                             "maxThruFinal": min(maxThruOne, maxThruTwo, maxThruThree)
                         }
