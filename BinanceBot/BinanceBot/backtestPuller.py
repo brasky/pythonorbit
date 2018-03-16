@@ -18,16 +18,17 @@ def triArb(firstSymbol, firstAsk, secondSymbol, secondAsk, thirdSymbol, thirdBid
     buyStart = time.time()
     triangle = True
     beginningBalance = client.get_asset_balance(asset='BTC')
+    orderoneQty = float(min((maxAmount / firstAsk), (float(beginningBalance['free']) / firstAsk)))
+    print(orderoneQty)
     orderOne = client.create_test_order(
-        symbol= firstSymbol,
+        symbol= str(firstSymbol),
         side='BUY',
-        type='MARKET',
-        timeInForce='FOK',
-        quantity= maxAmount,
-        price= firstAsk)
+        type= 'MARKET',
+        quantity= orderoneQty)
+
     print(orderOne)
 
-    while(triangle == True):
+    while triangle == True:
         if(client.get_asset_balance(asset=firstSymbol[:3] > 0)):
             secondAmount = client.get_asset_balance(asset=firstSymbol[:3])
             orderTwo = client.create_test_order(
@@ -77,6 +78,7 @@ with open("bnbdata.csv", "w") as result:
         #get first step - BTC to BNB
         #to do: how much bitcoin did you spend
             if 'BNBBTC' in x['symbol']:
+                global firstAsk
                 firstAsk = float(x['askPrice'])
                 global bid
                 bid = float(x['bidPrice'])
@@ -113,10 +115,12 @@ with open("bnbdata.csv", "w") as result:
                             "Ending Balance": float(bnbcoins['qty']) * ((float(allcoins['bidPrice'])/1.001)),
                             "maxThruFinal": min(maxThruOne, maxThruTwo, maxThruThree)
                         }
-
+                        #uncomment the two below comments to force arb conditions and test the buying function
+                        #thirdBalance['Ending Balance'] = 1.01
+                        #thirdBalance['maxThruFinal'] = 1.111
                         if thirdBalance['Ending Balance'] > 1 and thirdBalance['maxThruFinal'] > 0.002:
-                            secondAsk = float((item for item in tickers if item['symbol'] == bnbcoins['symbol']).next()['askPrice'])
-                            thirdBid = float((item for item in tickers if item['symbol'] == thirdBalance['symbol']).next()['bidPrice'])
+                            secondAsk = float((item for item in tickers if item['symbol'] == bnbcoins['symbol']).__next__()['askPrice'])
+                            thirdBid = float((item for item in tickers if item['symbol'] == thirdBalance['symbol']).__next__()['bidPrice'])
                             results = triArb('BNBBTC', firstAsk, bnbcoins['symbol'], secondAsk, thirdBalance['symbol'], thirdBid, thirdBalance['maxThruFinal'], thirdBalance['Ending Balance'])
                             print('results: ', results)
                             quit()
@@ -132,4 +136,4 @@ with open("bnbdata.csv", "w") as result:
         print(end - start)
 
 
-        time.sleep(4)
+        break
