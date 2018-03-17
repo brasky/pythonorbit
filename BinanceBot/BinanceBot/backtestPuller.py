@@ -2,6 +2,8 @@
 import  parameters
 import time
 import csv
+import math
+import decimal
 from binance.client import Client
 from binance.enums import *
 client = Client(parameters.apiKey, parameters.apiSecret)
@@ -18,40 +20,51 @@ def triArb(firstSymbol, firstAsk, secondSymbol, secondAsk, thirdSymbol, thirdBid
     buyStart = time.time()
     triangle = True
     beginningBalance = client.get_asset_balance(asset='BTC')
-    orderoneQty = float(min((maxAmount / firstAsk), (float(beginningBalance['free']) / firstAsk)))
+    print(beginningBalance)
+    #this math gets the max possible throughput and truncates down to 2 decimals per binance constraint
+    orderoneQty = math.floor(((min((maxAmount / firstAsk), (float(beginningBalance['free']) / firstAsk))))*100)/100
     print(orderoneQty)
+    #note that bnb only allows order quantities that are to 2 decimal points i.e. 1.11 units
+    #btc and eth markets allow 3 decimal points i.e. 1.111 units
     orderOne = client.create_test_order(
         symbol= str(firstSymbol),
         side='BUY',
         type= 'MARKET',
-        quantity= orderoneQty)
-
+        quantity= orderoneQty
+        )
     print(orderOne)
 
     while triangle == True:
-        if(client.get_asset_balance(asset=firstSymbol[:3] > 0)):
-            secondAmount = client.get_asset_balance(asset=firstSymbol[:3])
+        bnbBalance = float(client.get_asset_balance(asset='BNB')['free'])
+        print(bnbBalance)
+        #Note that order quantity must be in shitcoin terms. Also the prices are in BNB terms
+        #since the first purchase is equal or less to maximum throughput, we can just push the bnb balance through
+        ordertwoQty = math.floor(((bnbBalance / secondAsk)) * 100)/100
+        print(ordertwoQty)
+        if bnbBalance > 0:
             orderTwo = client.create_test_order(
-                symbol= secondSymbol,
+                symbol= str(secondSymbol),
                 side='BUY',
                 type='MARKET',
-                timeInForce='FOK',
-                quantity=secondAmount,
-                price=secondAsk)
+                quantity= ordertwoQty,
+                )
             print(orderTwo)
-        if(client.get_asset_balance(asset=secondSymbol[:3]) > 0):
-            thirdAmount = client.get_asset_balance(asset=firstSymbol[:3])
+
+        if(float(client.get_asset_balance(asset=secondSymbol[:3])['free'])) > 0:
+            #prices are in BTC terms, order quantity is in shitcoin terms
+            orderThreeQty = math.floor(float(client.get_asset_balance(asset=thirdSymbol[:3])['free'])*100)/100
+            print(orderThreeQty)
+            #at this point we just want to sell all shitcoin to get back to btc
             orderThree = client.create_test_order(
-                symbol= thirdSymbol,
+                symbol= str(thirdSymbol),
                 side='SELL',
                 type='MARKET',
-                timeInForce='FOK',
-                quantity=thirdAmount,
-                price=thirdBid)
+                quantity=orderThreeQty,
+                )
             print(orderThree)
             triangle = False
-    finalBalance = float(client.get_asset_balance(asset='BTC'))
-    actualProfit = beginningBalance - finalBalance
+    finalBalance = float(client.get_asset_balance(asset='BTC')['free'])
+    actualProfit = finalBalance - float(beginningBalance['free'])
     expectedProfit = endingBalance - 1
     arbitrageStats = {
         "Actual Profit": actualProfit,
@@ -116,8 +129,8 @@ with open("bnbdata.csv", "w") as result:
                             "maxThruFinal": min(maxThruOne, maxThruTwo, maxThruThree)
                         }
                         #uncomment the two below comments to force arb conditions and test the buying function
-                        #thirdBalance['Ending Balance'] = 1.01
-                        #thirdBalance['maxThruFinal'] = 1.111
+                        thirdBalance['Ending Balance'] = 1.01
+                        thirdBalance['maxThruFinal'] = 1.111
                         if thirdBalance['Ending Balance'] > 1 and thirdBalance['maxThruFinal'] > 0.002:
                             secondAsk = float((item for item in tickers if item['symbol'] == bnbcoins['symbol']).__next__()['askPrice'])
                             thirdBid = float((item for item in tickers if item['symbol'] == thirdBalance['symbol']).__next__()['bidPrice'])
