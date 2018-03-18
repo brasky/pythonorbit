@@ -18,42 +18,45 @@ def getSecondBalance(secondDataSymbol):
 def triArb(firstSymbol, firstAsk, secondSymbol, secondAsk, thirdSymbol, thirdBid, maxAmount, endingBalance):
     print(firstSymbol, secondSymbol, thirdSymbol, maxAmount)
     buyStart = time.time()
-    triangle = True
     beginningBalance = client.get_asset_balance(asset='BTC')
     print(beginningBalance)
     #this math gets the max possible throughput and truncates down to 2 decimals per binance constraint
     orderoneQty = math.floor(((min((maxAmount / firstAsk), (float(beginningBalance['free']) / firstAsk))))*100)/100
     #note that bnb only allows order quantities that are to 2 decimal points i.e. 1.11 units
     #btc and eth markets allow 3 decimal points i.e. 1.111 units
+
     orderOne = client.order_market_buy(
         symbol= str(firstSymbol),
         quantity= orderoneQty
         )
     print(orderOne)
 
-    while triangle == True:
-        bnbBalance = float(client.get_asset_balance(asset='BNB')['free'])
+
+    bnbBalance = float(orderOne['executedQty'])
+        #bnbBalance = float(client.get_asset_balance(asset='BNB')['free'])
         #Note that order quantity must be in shitcoin terms. Also the prices are in BNB terms
         #since the first purchase is equal or less to maximum throughput, we can just push the bnb balance through
-        ordertwoQty = math.floor(((bnbBalance / secondAsk)) * 100)/100
-        if bnbBalance > 0:
-            orderTwo = client.order_market_buy(
+    ordertwoQty = math.floor(((bnbBalance / secondAsk)) * 100)/100
+    print("order two quantity is", ordertwoQty)
+    print("second ask is", secondAsk)
+    orderTwo = client.order_market_buy(
                 symbol= str(secondSymbol),
                 quantity= ordertwoQty,
                 )
-            print(orderTwo)
+    print(orderTwo)
+        #some symbols are not 3 characters long
 
-        if(float(client.get_asset_balance(asset=secondSymbol[:3])['free'])) > 0:
+        #if(float(client.get_asset_balance(asset=secondSymbol[:-3])['free'])) > 0:
             #prices are in BTC terms, order quantity is in shitcoin terms
             #new fun constraint: binance only allows you to sell integer amounts for shitcoins (btc base currency)
-            orderThreeQty = math.floor(float(client.get_asset_balance(asset=thirdSymbol[:3])['free']))
+    orderThreeQty = math.floor(float(orderTwo['executedQty']))
             #at this point we just want to sell all shitcoin to get back to btc
-            orderThree = client.order_market_sell(
+    orderThree = client.order_market_sell(
                 symbol= str(thirdSymbol),
                 quantity=orderThreeQty,
                 )
-            print(orderThree)
-            triangle = False
+    print(orderThree)
+
     finalBalance = float(client.get_asset_balance(asset='BTC')['free'])
     actualProfit = finalBalance - float(beginningBalance['free'])
     expectedProfit = endingBalance - 1
@@ -122,7 +125,7 @@ with open("bnbdata.csv", "w") as result:
                         #uncomment the two below comments to force arb conditions and test the buying function
                         #thirdBalance['Ending Balance'] = 1.01
                         #thirdBalance['maxThruFinal'] = 1.111
-                        if thirdBalance['Ending Balance'] > 1 and thirdBalance['maxThruFinal'] > 0.002:
+                        if thirdBalance['Ending Balance'] > 1 and thirdBalance['maxThruFinal'] > 0.001:
                             secondAsk = float((item for item in tickers if item['symbol'] == bnbcoins['symbol']).__next__()['askPrice'])
                             thirdBid = float((item for item in tickers if item['symbol'] == thirdBalance['symbol']).__next__()['bidPrice'])
                             results = triArb('BNBBTC', firstAsk, bnbcoins['symbol'], secondAsk, thirdBalance['symbol'], thirdBid, thirdBalance['maxThruFinal'], thirdBalance['Ending Balance'])
@@ -136,8 +139,8 @@ with open("bnbdata.csv", "w") as result:
 
 
         end = time.time()
-        print(thirdData)
-        print(end - start)
+        #print(thirdData)
+        #print(end - start)
 
 
-        time.sleep(4)
+        time.sleep(2)

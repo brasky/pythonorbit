@@ -15,3 +15,4 @@ orderOne = client.create_test_order(
 
 print(orderOne)
 
+Estimated Value： 0.01202646 BTC / $91.28
