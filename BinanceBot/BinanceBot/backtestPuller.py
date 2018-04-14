@@ -1,6 +1,7 @@
 #import api wrapper
 import  parameters
 import time
+import datetime
 import csv
 import math
 import decimal
@@ -132,16 +133,15 @@ with open("bnbdata.csv", "w") as result:
 
                             print('results: ', results)
                             quit()
-
                         thirdData.append(thirdBalance)
-                        entry = [bnbcoins['symbol'], float(bnbcoins['qty']) * ((float(allcoins['bidPrice']))/1.001), thirdBalance['maxThruFinal']]
+                        entry = [bnbcoins['symbol'], float(bnbcoins['qty']) * ((float(allcoins['bidPrice']))/1.001), thirdBalance['maxThruFinal'], time.asctime()]
                         wr.writerow(entry)
 
 
 
         end = time.time()
         #print(thirdData)
-        print("calculated", len(thirdData), "triangular arbitrage opportunities in", round(end - start, 4), "seconds")
+        print("calculated", len(thirdData), "triangular arbitrage opportunities in", round(end - start, 4), "seconds, at", time.asctime())
 
 
         time.sleep(2)
