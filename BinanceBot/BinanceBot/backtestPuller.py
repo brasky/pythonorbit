@@ -112,7 +112,7 @@ with open("bnbdata.csv", "w") as result:
         for bnbcoins in secondData:
             for allcoins in tickers:
                 if 'BTC' in allcoins['symbol']:
-                    if bnbcoins['symbol'][:-3] in allcoins['symbol']:
+                    if bnbcoins['symbol'][:-3] == allcoins['symbol'][:-3]:
                         # maxThruThree is in bitcoin terms because btc is the base currency
                         maxThruThree= float(allcoins['bidPrice']) * (float(allcoins['bidQty']))
                         symbol = bnbcoins['symbol']
