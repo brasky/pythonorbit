@@ -55,7 +55,7 @@ def triArb(firstSymbol, firstAsk, secondSymbol, secondAsk, thirdSymbol, thirdBid
     print(orderThree)
 
     finalBalance = float(client.get_asset_balance(asset='BTC')['free'])
-    actualProfit = finalBalance - float(beginningBalance['free'])
+    actualProfit = finalBalance - beginningBalance
     expectedProfit = endingBalance - 1
     arbitrageStats = {
         "Actual Profit": actualProfit,
