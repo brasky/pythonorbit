@@ -72,10 +72,11 @@ with open("bnbethdata.csv", "w") as result:
     while True:
         global beginningBalance
         beginningBalance = float(client.get_asset_balance(asset='BTC')['free'])
-        #print("beginning balance is", beginningBalance)
+        print("beginning balance is", beginningBalance)
         global tickers
         tickers = client.get_orderbook_tickers()
-        #wr.writerow(tickers)
+        wr.writerow(tickers)
+        #wr.writerow(beginningBalance)
         start = time.time()
     #assuming that you have exactly one btc
         global secondData
@@ -169,5 +170,5 @@ with open("bnbethdata.csv", "w") as result:
         #print(thirdData)
         print("calculated", len(thirdData), "triangular arbitrage opportunities in", round(end - start, 4), "seconds, at", time.asctime())
 
-
+        #break
         time.sleep(2)
