@@ -3,3 +3,6 @@
 .idea/workspace.xml
 *.xml___jb_tmp___
 *.xml
+*.csv
+.idea/*
+.idea
