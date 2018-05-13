@@ -1,0 +1,91 @@
+#Here is the pseudo code for the logic described this morning
+
+
+Call tickers (all coins all data)
+
+lists we will have:
+
+BNBcoins = []
+ETHcoins = []
+BTCcoins = []
+firstData = []
+secondData = []
+thirdData = []
+###########################
+
+
+
+for allcoins in tickers
+
+#organize lists of each type we will deal with
+    if it's a BNB coin (not BNBBTC or BNBUSDT):
+        create a list of these coins called "BNBcoins"
+    if it's an ETH coin (not ETHBTC or ETHUSDT):
+        create a list of these coins called "ETHcoins"
+    if it's an BTC coin (not ETHBTC or BNBBTC or anything with USDT):
+        create a list of these coins called "BTCcoins"
+  #define the price/depth of the third step
+    if the symbol == ETHBTC:
+        define the price/depth of ETHBTC
+    if the symbol == BNBBTC:
+        define the price/depth of BNBBTC
+        
+        
+# now all calculations are done using those lists, instead of using the tickers
+
+#first step is to buy shitcoin
+for btccoins in BTCcoins:
+  calculate how many you could buy given the ask price
+  firstBalance = {
+  symbol,
+  1 / ask price / 1.001 
+  max throughput
+  }
+  
+  append firstData
+  
+#Second step
+
+for coins in firstData
+  for bnbcoins in BNBdata
+     if the symbols match:
+        BNBseconddata: {
+        Symbol (bnbcoins symbol),
+        quantity you could get for selling shitcoin for BNB
+        max throughput
+        }
+        append secondData
+ for ethcoins in ETHdata
+    if the symbols match:
+        ETHseconddata: {
+        Symbol (ethcoins symbol),
+        quantity you could get for selling shitcoin for ETH
+        max throughput
+        }
+        append secondData
+        
+# third step
+
+for coins in secondData
+    if symbol contains ETH:
+        thirdbalance = {
+        symbol (ethcoins),
+        quantity you could get for selling ETH for BTC - use variable on line 29
+        max throughput using line 29 as well
+        }
+        append thirdata
+    if symbol contains BNB:
+        thirdbalance = {
+        symbol (bnbcoins),
+        quantity you could get for selling bnb for BTC - use variable on line 31
+        max throughput using line 31 as well
+        }
+        append thirddata
+        
+log thirddata
+  
+  
+  
+  
+  
+  
