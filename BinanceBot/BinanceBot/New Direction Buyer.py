@@ -8,13 +8,29 @@ import decimal
 from binance.client import Client
 from binance.enums import *
 client = Client(parameters.apiKey, parameters.apiSecret)
+minThru = 0.001
     #pull all market data
+
+def getFirstBalance(firstDataSymbol):
+    for dict in firstData:
+        # print(secondData)
+        # print(dict)
+        if dict['symbol'] == firstDataSymbol:
+            return dict['maxThruOne']
+
+
 def getSecondBalance(secondDataSymbol):
         for dict in secondData:
             #print(secondData)
             #print(dict)
             if dict['symbol'] == secondDataSymbol:
                 return dict['maxThruTwo']
+
+def getTickers():
+    return client.get_orderbook_tickers()
+
+def getFreeBalance(coin):
+    return float(client.get_asset_balance(asset=coin)['free'])
 
 #def triArb(firstSymbol, firstAsk, secondSymbol, secondAsk, thirdSymbol, thirdBid, maxAmount, endingBalance):
     #print(firstSymbol, secondSymbol, thirdSymbol, maxAmount)
@@ -67,13 +83,15 @@ def getSecondBalance(secondDataSymbol):
     # return arbitrageStats
     #
 
+
+
 with open("testing.csv", "w") as result:
     wr = csv.writer(result, dialect='excel', delimiter=',')
     while True:
         global beginningBalance
-        beginningBalance = float(client.get_asset_balance(asset='BTC')['free'])
+        beginningBalance = getFreeBalance('BTC')
         global tickers
-        tickers = client.get_orderbook_tickers()
+        tickers = getTickers()
         start = time.time()
         global firstData
         firstData = []
@@ -81,53 +99,108 @@ with open("testing.csv", "w") as result:
         secondData = []
         global thirdData
         thirdData = []
-
-        for shitcoins in tickers:
+        for btcShitcoins in tickers:
         #get first step - BTC to Shitcoin, filter out base pairs
-            if shitcoins['symbol'][-3:] == "BTC" and 'BNBBTC' not in shitcoins['symbol'] and 'ETHBTC' not in shitcoins['symbol'] and 'USDT' not in shitcoins['symbol']:
+            if btcShitcoins['symbol'][-3:] == "BTC" and 'BNBBTC' not in btcShitcoins['symbol'] and 'ETHBTC' not in btcShitcoins['symbol'] and 'USDT' not in btcShitcoins['symbol']:
                 global firstAsk
-                firstAsk = float(shitcoins['askPrice'])
+                firstAsk = float(btcShitcoins['askPrice'])
                 global bid
-                bid = float(shitcoins['bidPrice'])
+                bid = float(btcShitcoins['bidPrice'])
                 global firstBalance
                 firstBalance = {
-                    "symbol": shitcoins['symbol'],
+                    "symbol": btcShitcoins['symbol'],
                     "qty": float((1 / (firstAsk*1.001))),
-                    "maxThruOne": float(shitcoins['askQty']) * firstAsk
+                    "maxThruOne": float(btcShitcoins['askQty']) * firstAsk
                 }
                 firstData.append(firstBalance)
 
     #get second step - Shitcoin to either BNB or ETH
         for shitcoins in firstData:
-            print(shitcoins['symbol'][:-3])
             for allcoins in tickers:
-                if shitcoins['symbol'][:-3] == allcoins['symbol'][:-3]:
-                    print(allcoins)
+                if shitcoins['symbol'][:-3] == allcoins['symbol'][:-3] and allcoins['symbol'][-3:] != "BTC":
                     secondBalanceBNB = {
                         "symbol": allcoins['symbol'],
                         "qty": firstBalance['qty'] * ((float(allcoins['bidPrice']) / 1.001)),
                         # price and qty are in BNB terms so "bid" variable brings maxThruTwo to BTC terms. bid will always be lower than ask so it's conservative
-                        "maxThruTwo": (float(shitcoins['bidPrice']) * float(shitcoins['bidQty'])) * bid
+                        "maxThruTwo": (float(allcoins['bidPrice']) * float(allcoins['bidQty'])) * bid
                     }
-                    print(secondBalanceBNB)
                     secondData.append(secondBalanceBNB)
 
+                #This never gets used, I'm not sure why this exists. It seems like we are getting all the data we need from the above.
                 if "ETH" in allcoins and shitcoins['symbol'][:-3] == allcoins['symbol'][:-3]:
                     global secondBalanceETH
+                    print("DID I MAKE IT HERE?!")
                     secondBalanceETH = {
                         "symbol": shitcoins['symbol'],
-                        "qty": firstBalance['symbol'] * ((float(shitcoins['bidPrice']) / 1.001)),
+                        "qty": firstBalance['qty'] * ((float(shitcoins['bidPrice']) / 1.001)),
                         # price and qty are in ETH terms so "bid" variable brings maxThruTwo to BTC terms. bid will always be lower than ask so it's conservative
                         "maxThruTwo": (float(shitcoins['bidPrice']) * float(shitcoins['bidQty'])) * bid
                     }
                     secondData.append(secondBalanceETH)
-        print(firstData)
-        print(secondData)
+        # print(firstData)
+        # print(len(secondData))
+        # print(len(firstData))
+        # print(secondData)
+
+        # #get last step - BNB or ETH back to BTC
+        for shitbnbeth in secondData:
+            for allcoinsbtc in tickers:
+                if 'BTC' in allcoinsbtc['symbol'] and 'USDT' not in allcoinsbtc['symbol']:
+                    if shitbnbeth['symbol'][-3:] == allcoinsbtc['symbol'][:3]:
+                        maxThruThree = float(allcoinsbtc['bidPrice']) * (float(allcoinsbtc['bidQty']))
+                        symbolOne = shitbnbeth['symbol'][:-3] + allcoinsbtc['symbol'][3:]
+                        symbolTwo = shitbnbeth['symbol']
+                        maxThruTwo = float(getSecondBalance(symbolTwo))
+                        maxThruOne = float(getFirstBalance(symbolOne))
+                        thirdBalance = {
+                            "symbol": shitbnbeth['symbol'],
+                            "Ending Balance": float(secondBalanceBNB['qty']) * ((float(allcoinsbtc['bidPrice'])/1.001)),
+                            "maxThruFinal": min(maxThruOne, maxThruTwo, maxThruThree)
+                        }
+
+                        print(thirdBalance)
+
         break
 
+####################################
+#
+#
+# #get last step - shitcoin back to BTC
+#         for bnbcoins in secondData:
+#             for allcoins in tickers:
+#                 if 'BTC' in allcoins['symbol']:
+#                     if bnbcoins['symbol'][:-3] == allcoins['symbol'][:-3]:
+#                         # maxThruThree is in bitcoin terms because btc is the base currency
+#                         maxThruThree= float(allcoins['bidPrice']) * (float(allcoins['bidQty']))
+#                         symbol = bnbcoins['symbol']
+#                         #we have to use the getSecondBalance function to ensure that the proper symbol is matched
+#                         maxThruTwo = float(getSecondBalance(symbol))
+#                         thirdBalance = {
+#                             "symbol": allcoins['symbol'],
+#                             "Ending Balance": float(bnbcoins['qty']) * ((float(allcoins['bidPrice'])/1.001)),
+#                             "maxThruFinal": min(maxThruOne, maxThruTwo, maxThruThree)
+#                         }
+#                         #uncomment the two below comments to force arb conditions and test the buying function
+#                         #thirdBalance['Ending Balance'] = 1.01
+#                         #thirdBalance['maxThruFinal'] = 1.111
+#                         if thirdBalance['Ending Balance'] > 1.001 and thirdBalance['maxThruFinal'] > 0.001:
+#                             secondAsk = float((item for item in tickers if item['symbol'] == bnbcoins['symbol']).__next__()['askPrice'])
+#                             thirdBid = float((item for item in tickers if item['symbol'] == thirdBalance['symbol']).__next__()['bidPrice'])
+#                             results = triArb("BNBBTC", firstAsk, bnbcoins['symbol'], secondAsk, thirdBalance['symbol'], thirdBid, thirdBalance['maxThruFinal'], thirdBalance['Ending Balance'])
+#
+#                             print('results: ', results)
+#
+#                         thirdData.append(thirdBalance)
+#                         entry = [bnbcoins['symbol'], float(bnbcoins['qty']) * ((float(allcoins['bidPrice']))/1.001), thirdBalance['maxThruFinal'], time.asctime()]
 
 
 
+
+
+
+
+
+###############################
 
 
 
