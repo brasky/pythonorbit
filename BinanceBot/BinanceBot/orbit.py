@@ -7,24 +7,15 @@ import math
 import decimal
 from binance.client import Client
 from binance.enums import *
+from estimateProfit import *
+from organizeCoins import *
+
+
+
 client = Client(parameters.apiKey, parameters.apiSecret)
-minThru = 0.001
-    #pull all market data
+minThru = parameters.minThru
+minProfit = parameters.minProfit
 
-def getFirstBalance(firstDataSymbol):
-    for dict in firstData:
-        # print(secondData)
-        # print(dict)
-        if dict['symbol'] == firstDataSymbol:
-            return dict['maxThruOne']
-
-
-def getSecondBalance(secondDataSymbol):
-        for dict in secondData:
-            #print(secondData)
-            #print(dict)
-            if dict['symbol'] == secondDataSymbol:
-                return dict['maxThruTwo']
 
 def getTickers():
     return client.get_orderbook_tickers()
@@ -32,135 +23,119 @@ def getTickers():
 def getFreeBalance(coin):
     return float(client.get_asset_balance(asset=coin)['free'])
 
-#def triArb(firstSymbol, firstAsk, secondSymbol, secondAsk, thirdSymbol, thirdBid, maxAmount, endingBalance):
-    #print(firstSymbol, secondSymbol, thirdSymbol, maxAmount)
-    #buyStart = time.time()
-    #this math gets the max possible throughput and truncates down to 2 decimals per binance constraint
-    #orderoneQty = math.floor((min((maxAmount / firstAsk), beginningBalance / firstAsk))*100)/100
-    #note that bnb only allows order quantities that are to 2 decimal points i.e. 1.11 units
-    #btc and eth markets allow 3 decimal points i.e. 1.111 units
 
-    #orderOne = client.order_market_buy(
-    #    symbol= str(firstSymbol),
-    #    quantity= orderoneQty
-     #   )
-    #print(orderOne)
 
-    #
-    # bnbBalance = float(orderOne['executedQty'])
-    #     #bnbBalance = float(client.get_asset_balance(asset='BNB')['free'])
-    #     #Note that order quantity must be in shitcoin terms. Also the prices are in BNB terms
-    #     #since the first purchase is equal or less to maximum throughput, we can just push the bnb balance through
-    # ordertwoQty = math.floor(((bnbBalance / secondAsk)/1.001) * 100)/100
-    # print("order two quantity is", ordertwoQty)
-    # print("second ask is", secondAsk)
-    # #orderTwo = client.order_market_buy(
-    # #             symbol= str(secondSymbol),
-    # #             quantity= ordertwoQty,
-    # #             )
-    # # print(orderTwo)
-    # #     #some symbols are not 3 characters long
-    # #     #if(float(client.get_asset_balance(asset=secondSymbol[:-3])['free'])) > 0:
-    # #         #prices are in BTC terms, order quantity is in shitcoin terms
-    # #         #new fun constraint: binance only allows you to sell integer amounts for shitcoins (btc base currency)
-    # orderThreeQty = math.floor(float(orderTwo['executedQty'])/1.001)
-    #         #at this point we just want to sell all shitcoin to get back to btc
-    # #orderThree = client.order_market_sell(
-    #             symbol= str(thirdSymbol),
-    #             quantity=orderThreeQty,
-    #             )
-    # print(orderThree)
-    #
-    # finalBalance = float(client.get_asset_balance(asset='BTC')['free'])
-    # actualProfit = finalBalance - beginningBalance
-    # expectedProfit = endingBalance - 1
-    # arbitrageStats = {
-    #     "Actual Profit": actualProfit,
-    #     "Expected Profit": expectedProfit
-    # }
-    # buyEnd = time.time()
-    # print("Buy time: ", buyEnd - buyStart)
-    # return arbitrageStats
-    #
+def main():
+    time.sleep(2)
+    firstData = []
+    secondData = []
+    thirdData = []
+    BNBcoins = []
+    ETHcoins = []
+    BTCcoins = []
+    baseCoins = []
+
+    start = time.time()
+    tickers = getTickers()
+    beginningBalance = getFreeBalance('BTC')
+    BTCcoins, BNBcoins, ETHcoins, BNBBTC, ETHBTC = organizeCoins(tickers, BTCcoins, BNBcoins, ETHcoins)
+    profitResult = estimateProfit(beginningBalance, BTCcoins, BNBcoins, ETHcoins, BNBBTC, ETHBTC, minProfit)
+    if profitResult:
+        print(profitResult)
+
+    #if profitResult['profit'] > minProfit:
+    #    triArb(profitResult)
+
+
+while True:
+    main()
 
 
 
-with open("testing.csv", "w") as result:
-    wr = csv.writer(result, dialect='excel', delimiter=',')
-    while True:
-        global beginningBalance
-        beginningBalance = getFreeBalance('BTC')
-        global tickers
-        tickers = getTickers()
-        start = time.time()
-        global firstData
-        firstData = []
-        global secondData
-        secondData = []
-        global thirdData
-        thirdData = []
-        for btcShitcoins in tickers:
-        #get first step - BTC to Shitcoin, filter out base pairs
-            if btcShitcoins['symbol'][-3:] == "BTC" and 'BNBBTC' not in btcShitcoins['symbol'] and 'ETHBTC' not in btcShitcoins['symbol'] and 'USDT' not in btcShitcoins['symbol']:
-                global firstAsk
-                firstAsk = float(btcShitcoins['askPrice'])
-                global bid
-                bid = float(btcShitcoins['bidPrice'])
-                global firstBalance
-                firstBalance = {
-                    "symbol": btcShitcoins['symbol'],
-                    "qty": float((1 / (firstAsk*1.001))),
-                    "maxThruOne": float(btcShitcoins['askQty']) * firstAsk
-                }
-                firstData.append(firstBalance)
 
-    #get second step - Shitcoin to either BNB or ETH
-        for shitcoins in firstData:
-            for allcoins in tickers:
-                if shitcoins['symbol'][:-3] == allcoins['symbol'][:-3] and allcoins['symbol'][-3:] != "BTC":
-                    secondBalanceBNB = {
-                        "symbol": allcoins['symbol'],
-                        "qty": firstBalance['qty'] * ((float(allcoins['bidPrice']) / 1.001)),
-                        # price and qty are in BNB terms so "bid" variable brings maxThruTwo to BTC terms. bid will always be lower than ask so it's conservative
-                        "maxThruTwo": (float(allcoins['bidPrice']) * float(allcoins['bidQty'])) * bid
-                    }
-                    secondData.append(secondBalanceBNB)
-
-                #This never gets used, I'm not sure why this exists. It seems like we are getting all the data we need from the above.
-                if "ETH" in allcoins and shitcoins['symbol'][:-3] == allcoins['symbol'][:-3]:
-                    global secondBalanceETH
-                    print("DID I MAKE IT HERE?!")
-                    secondBalanceETH = {
-                        "symbol": shitcoins['symbol'],
-                        "qty": firstBalance['qty'] * ((float(shitcoins['bidPrice']) / 1.001)),
-                        # price and qty are in ETH terms so "bid" variable brings maxThruTwo to BTC terms. bid will always be lower than ask so it's conservative
-                        "maxThruTwo": (float(shitcoins['bidPrice']) * float(shitcoins['bidQty'])) * bid
-                    }
-                    secondData.append(secondBalanceETH)
-        # print(firstData)
-        # print(len(secondData))
-        # print(len(firstData))
-        # print(secondData)
-
-        # #get last step - BNB or ETH back to BTC
-        for shitbnbeth in secondData:
-            for allcoinsbtc in tickers:
-                if 'BTC' in allcoinsbtc['symbol'] and 'USDT' not in allcoinsbtc['symbol']:
-                    if shitbnbeth['symbol'][-3:] == allcoinsbtc['symbol'][:3]:
-                        maxThruThree = float(allcoinsbtc['bidPrice']) * (float(allcoinsbtc['bidQty']))
-                        symbolOne = shitbnbeth['symbol'][:-3] + allcoinsbtc['symbol'][3:]
-                        symbolTwo = shitbnbeth['symbol']
-                        maxThruTwo = float(getSecondBalance(symbolTwo))
-                        maxThruOne = float(getFirstBalance(symbolOne))
-                        thirdBalance = {
-                            "symbol": shitbnbeth['symbol'],
-                            "Ending Balance": float(secondBalanceBNB['qty']) * ((float(allcoinsbtc['bidPrice'])/1.001)),
-                            "maxThruFinal": min(maxThruOne, maxThruTwo, maxThruThree)
-                        }
-
-                        print(thirdBalance)
-
-        break
+#
+# firstAsk = float(coin['askPrice'])
+#
+# symbol = coin['symbol']
+# qty = float((1 / (firstAsk * 1.001)))
+# maxThruOne = float(coin['askQty']) * firstAsk
+#
+# firstResult = {
+#     "symbol": symbol,
+#     "qty": qty,
+#     "maxThruOne": maxThruOne
+# }
+#
+# firstData.append(firstResult)
+################################################################3
+#
+#
+# with open("testing.csv", "w") as result:
+#     wr = csv.writer(result, dialect='excel', delimiter=',')
+#     while True:
+#         start = time.time()
+#         for btcShitcoins in tickers:
+#         #get first step - BTC to Shitcoin, filter out base pairs
+#             if btcShitcoins['symbol'][-3:] == "BTC" and 'BNBBTC' not in btcShitcoins['symbol'] and 'ETHBTC' not in btcShitcoins['symbol'] and 'USDT' not in btcShitcoins['symbol']:
+#                 global firstAsk
+#                 firstAsk = float(btcShitcoins['askPrice'])
+#                 global bid
+#                 bid = float(btcShitcoins['bidPrice'])
+#                 global firstBalance
+#                 firstBalance = {
+#                     "symbol": btcShitcoins['symbol'],
+#                     "qty": float((1 / (firstAsk*1.001))),
+#                     "maxThruOne": float(btcShitcoins['askQty']) * firstAsk
+#                 }
+#                 firstData.append(firstBalance)
+#
+#     #get second step - Shitcoin to either BNB or ETH
+#         for shitcoins in firstData:
+#             for allcoins in tickers:
+#                 if shitcoins['symbol'][:-3] == allcoins['symbol'][:-3] and allcoins['symbol'][-3:] != "BTC":
+#                     secondBalanceBNB = {
+#                         "symbol": allcoins['symbol'],
+#                         "qty": firstBalance['qty'] * ((float(allcoins['bidPrice']) / 1.001)),
+#                         # price and qty are in BNB terms so "bid" variable brings maxThruTwo to BTC terms. bid will always be lower than ask so it's conservative
+#                         "maxThruTwo": (float(allcoins['bidPrice']) * float(allcoins['bidQty'])) * bid
+#                     }
+#                     secondData.append(secondBalanceBNB)
+#
+#                 #This never gets used, I'm not sure why this exists. It seems like we are getting all the data we need from the above.
+#                 if "ETH" in allcoins and shitcoins['symbol'][:-3] == allcoins['symbol'][:-3]:
+#                     global secondBalanceETH
+#                     print("DID I MAKE IT HERE?!")
+#                     secondBalanceETH = {
+#                         "symbol": shitcoins['symbol'],
+#                         "qty": firstBalance['qty'] * ((float(shitcoins['bidPrice']) / 1.001)),
+#                         # price and qty are in ETH terms so "bid" variable brings maxThruTwo to BTC terms. bid will always be lower than ask so it's conservative
+#                         "maxThruTwo": (float(shitcoins['bidPrice']) * float(shitcoins['bidQty'])) * bid
+#                     }
+#                     secondData.append(secondBalanceETH)
+#         # print(firstData)
+#         # print(len(secondData))
+#         # print(len(firstData))
+#         # print(secondData)
+#
+#         # #get last step - BNB or ETH back to BTC
+#         for shitbnbeth in secondData:
+#             for allcoinsbtc in tickers:
+#                 if 'BTC' in allcoinsbtc['symbol'] and 'USDT' not in allcoinsbtc['symbol']:
+#                     if shitbnbeth['symbol'][-3:] == allcoinsbtc['symbol'][:3]:
+#                         maxThruThree = float(allcoinsbtc['bidPrice']) * (float(allcoinsbtc['bidQty']))
+#                         symbolOne = shitbnbeth['symbol'][:-3] + allcoinsbtc['symbol'][3:]
+#                         symbolTwo = shitbnbeth['symbol']
+#                         maxThruTwo = float(getSecondBalance(symbolTwo))
+#                         maxThruOne = float(getFirstBalance(symbolOne))
+#                         thirdBalance = {
+#                             "symbol": shitbnbeth['symbol'],
+#                             "Ending Balance": float(secondBalanceBNB['qty']) * ((float(allcoinsbtc['bidPrice'])/1.001)),
+#                             "maxThruFinal": min(maxThruOne, maxThruTwo, maxThruThree)
+#                         }
+#
+#                         print(thirdBalance)
+#
+#         break
 
 ####################################
 #
