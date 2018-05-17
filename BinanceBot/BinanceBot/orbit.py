@@ -40,8 +40,18 @@ def main():
     beginningBalance = getFreeBalance('BTC')
     BTCcoins, BNBcoins, ETHcoins, BNBBTC, ETHBTC = organizeCoins(tickers, BTCcoins, BNBcoins, ETHcoins)
     profitResult = estimateProfit(beginningBalance, BTCcoins, BNBcoins, ETHcoins, BNBBTC, ETHBTC, minProfit)
+    end = time.time()
+    #print(end-start)
     if profitResult:
-        print(profitResult)
+        for triangle in profitResult:
+            print("Triangle Found:")
+            print("Coins:")
+            print("BTC -> " + triangle['coin1'] + " -> " + triangle['coin2'])
+            print("Profit %:")
+            print(triangle['profit'])
+            print("Max Through:")
+            print(triangle['maxThru'])
+
 
     #if profitResult['profit'] > minProfit:
     #    triArb(profitResult)
