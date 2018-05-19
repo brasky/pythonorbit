@@ -24,8 +24,8 @@ def estimateProfit(beginningBalance, BTCcoins, BNBcoins, ETHcoins, BNBBTC, ETHBT
             if firstBalance['symbol'] == bnbcoin['symbol'][:-3]:
                 symbol = bnbcoin['symbol'][-3:]
                 balance = firstBalance['balance'] * bnbcoin['bidPrice'] / 1.001
-                maxThru = bnbcoin['bidQty'] * bnbcoin['bidPrice']
-                #balance of bnb: NOTE: need to fix maxthru terms, currently they are in bnb or shit I am not sure...
+                maxThru = bnbcoin['bidQty'] * bnbcoin['bidPrice'] / BNBBTC['askPrice']
+                #balance of bnb: NOTE: by dividing by the BNBBTC ask price, you bring it to BTC terms
                 secondBalance = {
                     "symbol": symbol,
                     "balance": balance,
@@ -73,9 +73,9 @@ def estimateProfit(beginningBalance, BTCcoins, BNBcoins, ETHcoins, BNBBTC, ETHBT
         for ethcoin in ETHcoins:
             if firstBalance['symbol'] == ethcoin['symbol'][:-3]:
                 symbol = ethcoin['symbol'][-3:]
-                balance = firstBalance['balance'] * ethcoin['bidPrice']
-                maxThru = ethcoin['bidQty'] * ethcoin['bidPrice']
-                #balance of eth: NOTE: need to fix maxthru terms, currently they are in eth or shit I am not sure...
+                balance = firstBalance['balance'] * ethcoin['bidPrice'] / 1.001
+                maxThru = ethcoin['bidQty'] * ethcoin['bidPrice'] / ETHBTC['askPrice']
+                #balance of eth: NOTE: dividing by the ETHBTC ask price brings it to BTC terms
                 secondBalance = {
                     "symbol": symbol,
                     "balance": balance,
@@ -83,7 +83,7 @@ def estimateProfit(beginningBalance, BTCcoins, BNBcoins, ETHcoins, BNBBTC, ETHBT
                 }
 
                 thirdBalance = {
-                    "balance": secondBalance['balance'] * ETHBTC['bidPrice'],
+                    "balance": secondBalance['balance'] * ETHBTC['bidPrice'] / 1.001,
                     "maxThru": ETHBTC['bidQty'] * ETHBTC['bidPrice']
                 }
                 possibeTriangle = {
