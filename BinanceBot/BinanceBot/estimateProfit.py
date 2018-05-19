@@ -70,7 +70,7 @@ def estimateProfit(beginningBalance, BTCcoins, BNBcoins, ETHcoins, BNBBTC, ETHBT
                         "coin1": firstBalance['symbol'],
                         "coin1Price": firstBalance['askPrice'],
                         "coin2": secondBalance['symbol'],
-                        "coin2Price":bnbcoin['bidPrice'],
+                        "coin2Price": bnbcoin['bidPrice'],
                         "profit": thirdBalance['balance'],
                         "maxThru": min(firstBalance['maxThru'], secondBalance['maxThru'], thirdBalance['maxThru'])
                     }
