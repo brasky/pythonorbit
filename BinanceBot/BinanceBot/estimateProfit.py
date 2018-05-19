@@ -12,7 +12,7 @@ def estimateProfit(beginningBalance, BTCcoins, BNBcoins, ETHcoins, BNBBTC, ETHBT
     for coin in BTCcoins:
         symbol = coin['symbol'][:-3]
         balance = 1.00 / coin['askPrice'] / 1.001
-        maxThru = coin['askQty'] * coin['askPrice']
+        maxThru = coin['askQty'] * coin['askPrice'] /1.001
         # firstBalance is the balance the shitcoin:
         firstBalance = {
             "symbol": symbol,
@@ -24,7 +24,7 @@ def estimateProfit(beginningBalance, BTCcoins, BNBcoins, ETHcoins, BNBBTC, ETHBT
             if firstBalance['symbol'] == bnbcoin['symbol'][:-3]:
                 symbol = bnbcoin['symbol'][-3:]
                 balance = firstBalance['balance'] * bnbcoin['bidPrice'] / 1.001
-                maxThru = bnbcoin['bidQty'] * bnbcoin['bidPrice'] / BNBBTC['askPrice']
+                maxThru = bnbcoin['bidQty'] * bnbcoin['bidPrice'] / BNBBTC['askPrice'] / 1.001
                 #balance of bnb: NOTE: by dividing by the BNBBTC ask price, you bring it to BTC terms
                 secondBalance = {
                     "symbol": symbol,
@@ -74,7 +74,7 @@ def estimateProfit(beginningBalance, BTCcoins, BNBcoins, ETHcoins, BNBBTC, ETHBT
             if firstBalance['symbol'] == ethcoin['symbol'][:-3]:
                 symbol = ethcoin['symbol'][-3:]
                 balance = firstBalance['balance'] * ethcoin['bidPrice'] / 1.001
-                maxThru = ethcoin['bidQty'] * ethcoin['bidPrice'] / ETHBTC['askPrice']
+                maxThru = ethcoin['bidQty'] * ethcoin['bidPrice'] / ETHBTC['askPrice'] /1.001
                 #balance of eth: NOTE: dividing by the ETHBTC ask price brings it to BTC terms
                 secondBalance = {
                     "symbol": symbol,
