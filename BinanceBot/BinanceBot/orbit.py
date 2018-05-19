@@ -63,7 +63,8 @@ def main():
     for profit in profitPercentLog:
         influxclient.write_points(profit)
     influxclient.write_points(latency)
-    print(profitResult)
+    if profitResult:
+        print(profitResult)
 
     if profitResult:
         for triangle in profitResult:
