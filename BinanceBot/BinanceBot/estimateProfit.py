@@ -3,6 +3,9 @@ from datetime import datetime
 import parameters
 import time
 
+minThru = parameters.minThru
+
+
 def estimateProfit(beginningBalance, BTCcoins, BNBcoins, ETHcoins, BNBBTC, ETHBTC, minProfit):
     beginningBalance = beginningBalance
     finalResult = []
@@ -16,6 +19,7 @@ def estimateProfit(beginningBalance, BTCcoins, BNBcoins, ETHcoins, BNBBTC, ETHBT
         # firstBalance is the balance the shitcoin:
         firstBalance = {
             "symbol": symbol,
+            "askPrice": coin['askPrice'],
             "balance": balance,
             "maxThru": maxThru
         }
@@ -64,7 +68,9 @@ def estimateProfit(beginningBalance, BTCcoins, BNBcoins, ETHcoins, BNBBTC, ETHBT
 
                     triangle = {
                         "coin1": firstBalance['symbol'],
+                        "coin1Price": firstBalance['askPrice'],
                         "coin2": secondBalance['symbol'],
+                        "coin2Price":bnbcoin['bidPrice'],
                         "profit": thirdBalance['balance'],
                         "maxThru": min(firstBalance['maxThru'], secondBalance['maxThru'], thirdBalance['maxThru'])
                     }
@@ -114,11 +120,14 @@ def estimateProfit(beginningBalance, BTCcoins, BNBcoins, ETHcoins, BNBBTC, ETHBT
 
                     triangle = {
                         "coin1": firstBalance['symbol'],
+                        "coin1Price": firstBalance['askPrice'],
                         "coin2": secondBalance['symbol'],
+                        "coin2Price": ethcoin['bidPrice'],
                         "profit": thirdBalance['balance'],
                         "maxThru": min(firstBalance['maxThru'], secondBalance['maxThru'], thirdBalance['maxThru'])
                     }
-                    finalResult.append(triangle)
+                    if triangle['maxThru'] > minThru:
+                        finalResult.append(triangle)
 
     endTestTime = time.time()
     # print(endTestTime - testTime)

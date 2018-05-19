@@ -11,6 +11,7 @@ from estimateProfit import *
 from organizeCoins import *
 from influxdb import InfluxDBClient
 from datetime import datetime
+from triArb import *
 
 
 influxclient = InfluxDBClient('localhost', parameters.dbport, parameters.dbusername, parameters.dbpassword, parameters.dbname)
@@ -19,6 +20,7 @@ influxclient.create_database(parameters.dbname)
 client = Client(parameters.apiKey, parameters.apiSecret)
 minThru = parameters.minThru
 minProfit = parameters.minProfit
+
 
 
 def getTickers():
@@ -38,6 +40,7 @@ def main():
     ETHcoins = []
     BTCcoins = []
     baseCoins = []
+    # print(beginningBalance)
 
     start = time.time()
     tickers = getTickers()
@@ -58,16 +61,11 @@ def main():
         }
     ]
 
-
-    # print(end - start)
-    for profit in profitPercentLog:
-        influxclient.write_points(profit)
-    influxclient.write_points(latency)
     if profitResult:
         print(profitResult)
-
     if profitResult:
         for triangle in profitResult:
+            # triArb(client, beginningBalance, triangle, BNBBTC, ETHBTC)
             print("Triangle Found:")
             print("Coins:")
             print("BTC -> " + triangle['coin1'] + " -> " + triangle['coin2'])
@@ -77,12 +75,20 @@ def main():
             print(triangle['maxThru'])
 
 
+    for profit in profitPercentLog:
+        influxclient.write_points(profit)
+    influxclient.write_points(latency)
+
     #if profitResult['profit'] > minProfit:
     #    triArb(profitResult)
 
 
 while True:
     main()
+
+
+
+
 
 
 
