@@ -1,6 +1,14 @@
+from influxdb import InfluxDBClient
+from datetime import datetime
+import parameters
+import time
+
 def estimateProfit(beginningBalance, BTCcoins, BNBcoins, ETHcoins, BNBBTC, ETHBTC, minProfit):
     beginningBalance = beginningBalance
     finalResult = []
+    profitPercentLog = []
+    logTime = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
+    testTime = time.time()
     for coin in BTCcoins:
         symbol = coin['symbol'][:-3]
         balance = 1.00 / coin['askPrice'] / 1.001
@@ -28,6 +36,30 @@ def estimateProfit(beginningBalance, BTCcoins, BNBcoins, ETHcoins, BNBBTC, ETHBT
                     "balance": secondBalance['balance'] * BNBBTC['bidPrice'],
                     "maxThru": BNBBTC['bidQty'] * BNBBTC['bidPrice']
                 }
+                possibeTriangle = {
+                    "coin1": "BTC",
+                    "coin2": firstBalance['symbol'],
+                    "coin3": secondBalance['symbol']
+                }
+                profitPercent = [
+                    {
+                        "measurement": "Profit_Percentage",
+                        "tags": {
+                            "Exchange": "Binance",
+                            "triangle": "" + possibeTriangle["coin1"] + "-" + possibeTriangle["coin2"] + "-" +
+                                        possibeTriangle["coin3"]
+
+                        },
+                        "time": logTime,
+                        "fields": {
+                            "profit": thirdBalance['balance'],
+                            "triangle": "" + possibeTriangle["coin1"] + "-" + possibeTriangle["coin2"] + "-" +
+                                        possibeTriangle["coin3"]
+
+                        }
+                    }
+                ]
+                profitPercentLog.append(profitPercent)
                 if thirdBalance['balance'] > minProfit:
 
                     triangle = {
@@ -54,6 +86,30 @@ def estimateProfit(beginningBalance, BTCcoins, BNBcoins, ETHcoins, BNBBTC, ETHBT
                     "balance": secondBalance['balance'] * ETHBTC['bidPrice'],
                     "maxThru": ETHBTC['bidQty'] * ETHBTC['bidPrice']
                 }
+                possibeTriangle = {
+                    "coin1": "BTC",
+                    "coin2": firstBalance['symbol'],
+                    "coin3": secondBalance['symbol']
+                }
+                profitPercent = [
+                    {
+                        "measurement": "Profit_Percentage",
+                        "tags": {
+                            "Exchange": "Binance",
+                            "triangle": "" + possibeTriangle["coin1"] + "-" + possibeTriangle["coin2"] + "-" +
+                                        possibeTriangle["coin3"]
+
+                        },
+                        "time": logTime,
+                        "fields": {
+                            "profit": thirdBalance['balance'],
+                            "triangle": "" + possibeTriangle["coin1"] + "-" + possibeTriangle["coin2"] + "-" +
+                                        possibeTriangle["coin3"]
+
+                        }
+                    }
+                ]
+                profitPercentLog.append(profitPercent)
                 if thirdBalance['balance'] > minProfit:
 
                     triangle = {
@@ -63,4 +119,7 @@ def estimateProfit(beginningBalance, BTCcoins, BNBcoins, ETHcoins, BNBBTC, ETHBT
                         "maxThru": min(firstBalance['maxThru'], secondBalance['maxThru'], thirdBalance['maxThru'])
                     }
                     finalResult.append(triangle)
-    return finalResult
+
+    endTestTime = time.time()
+    # print(endTestTime - testTime)
+    return finalResult, profitPercentLog

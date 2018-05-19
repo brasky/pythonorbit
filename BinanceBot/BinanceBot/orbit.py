@@ -9,8 +9,12 @@ from binance.client import Client
 from binance.enums import *
 from estimateProfit import *
 from organizeCoins import *
+from influxdb import InfluxDBClient
+from datetime import datetime
 
 
+influxclient = InfluxDBClient('localhost', parameters.dbport, parameters.dbusername, parameters.dbpassword, parameters.dbname)
+influxclient.create_database(parameters.dbname)
 
 client = Client(parameters.apiKey, parameters.apiSecret)
 minThru = parameters.minThru
@@ -23,7 +27,7 @@ def getTickers():
 def getFreeBalance(coin):
     return float(client.get_asset_balance(asset=coin)['free'])
 
-
+beginningBalance = getFreeBalance('BTC')
 
 def main():
     time.sleep(2)
@@ -37,11 +41,30 @@ def main():
 
     start = time.time()
     tickers = getTickers()
-    beginningBalance = getFreeBalance('BTC')
+
     BTCcoins, BNBcoins, ETHcoins, BNBBTC, ETHBTC = organizeCoins(tickers, BTCcoins, BNBcoins, ETHcoins)
-    profitResult = estimateProfit(beginningBalance, BTCcoins, BNBcoins, ETHcoins, BNBBTC, ETHBTC, minProfit)
+    profitResult, profitPercentLog = estimateProfit(beginningBalance, BTCcoins, BNBcoins, ETHcoins, BNBBTC, ETHBTC, minProfit)
     end = time.time()
-    #print(end-start)
+    latency = [
+        {
+            "measurement": "Profit_Estimation_Latency",
+            "tags": {
+                "Exchange": "Binance"
+            },
+            "time": datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'),
+            "fields": {
+                "value": end-start
+            }
+        }
+    ]
+
+
+    # print(end - start)
+    for profit in profitPercentLog:
+        influxclient.write_points(profit)
+    influxclient.write_points(latency)
+    print(profitResult)
+
     if profitResult:
         for triangle in profitResult:
             print("Triangle Found:")
@@ -59,6 +82,8 @@ def main():
 
 while True:
     main()
+
+
 
 
 
