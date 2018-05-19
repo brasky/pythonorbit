@@ -18,38 +18,47 @@ from binance.exceptions import BinanceAPIException
 def triArb(client, beginningBalance, triangle, BNBBTC, ETHBTC):
     #first purchase limit order buy
 
-    firstPair = triangle['coin1'] + 'BTC'
-    maxThru = triangle['maxThru'] / triangle['coin1Price']
-    maxThru = '%.2f'%(maxThru)
+    firstPair = triangle['coin1']
+    firstQtyTheoretical = triangle['maxThru'] / triangle['coin1Price']
+    firstQty = (math.floor(firstQtyTheoretical * (10**triangle['coin1Decimals']))/(10**triangle['coin1Decimals']))
     try:
 
-        order = client.order_limit_buy(
+        orderOne = client.order_limit_buy(
             symbol=firstPair,
-            quantity=maxThru,
-            price=triangle['coin1Price'])
+            quantity=firstQty,
+            price=triangle['coin1Price']
+        )
+    except:
+        print("order book changed unfavorably - aborting")
 
         #market order sells:
 
-        secondPair = triangle['coin1'] + triangle['coin2']
-        order = client.order_market_sell(
+        secondPair = triangle['coin2']
+        secondQtyTheoretical = orderOne['executedQty'] / 1.001
+        secondQty = (math.floor(secondQtyTheoretical * (10**triangle['coin2Decimals']))/(10**triangle['coin2Decimals']))
+        orderTwo = client.order_market_sell(
             symbol=secondPair,
-            quantity=maxThru)
+            quantity=secondQty
+        )
 
-        thirdPair = triangle['coin2'] + 'BTC'
+        thirdPair = triangle['coin2'][-3:] + 'BTC'
+        thirdQtyTheoretical = orderTwo['executedQty'] / 1.001
         if thirdPair == "BNBBTC":
-            qty = '%.2f'%(float(maxThru) * triangle['coin2Price'])
-            order = client.order_market_sell(
+            qty = (math.floor(thirdQtyTheoretical * 100)/100)
+            orderThree = client.order_market_sell(
                 symbol=thirdPair,
-                quantity=qty)
+                quantity=qty
+            )
 
         if thirdPair == "ETHBTC":
-            qty = '%.2f'%(float(maxThru) * triangle['coin2Price'])
-            order = client.order_market_sell(
+            qty = (math.floor(thirdQtyTheoretical * 1000) / 1000)
+            orderThree = client.order_market_sell(
                 symbol=thirdPair,
-                quantity=qty)
+                quantity=qty
+            )
 
-    except BinanceAPIException as e:
-        print("something broke")
-        print(e)
+    # except BinanceAPIException as e:
+    #     print("something broke")
+    #     print(e)
 
     print("done")
