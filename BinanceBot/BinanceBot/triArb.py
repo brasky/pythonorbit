@@ -28,8 +28,6 @@ def triArb(client, beginningBalance, triangle, BNBBTC, ETHBTC):
             quantity=firstQty,
             price=triangle['coin1Price']
         )
-    except:
-        print("order book changed unfavorably - aborting")
 
         #market order sells:
 
@@ -57,8 +55,8 @@ def triArb(client, beginningBalance, triangle, BNBBTC, ETHBTC):
                 quantity=qty
             )
 
-    # except BinanceAPIException as e:
-    #     print("something broke")
-    #     print(e)
+    except BinanceAPIException as e:
+        print("something broke")
+        print(e)
 
     print("done")
