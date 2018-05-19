@@ -23,7 +23,7 @@ def estimateProfit(beginningBalance, BTCcoins, BNBcoins, ETHcoins, BNBBTC, ETHBT
         for bnbcoin in BNBcoins:
             if firstBalance['symbol'] == bnbcoin['symbol'][:-3]:
                 symbol = bnbcoin['symbol'][-3:]
-                balance = firstBalance['balance'] * bnbcoin['bidPrice']
+                balance = firstBalance['balance'] * bnbcoin['bidPrice'] / 1.001
                 maxThru = bnbcoin['bidQty'] * bnbcoin['bidPrice']
                 #balance of bnb: NOTE: need to fix maxthru terms, currently they are in bnb or shit I am not sure...
                 secondBalance = {
@@ -33,7 +33,7 @@ def estimateProfit(beginningBalance, BTCcoins, BNBcoins, ETHcoins, BNBBTC, ETHBT
                 }
 
                 thirdBalance = {
-                    "balance": secondBalance['balance'] * BNBBTC['bidPrice'],
+                    "balance": secondBalance['balance'] * BNBBTC['bidPrice'] / 1.001,
                     "maxThru": BNBBTC['bidQty'] * BNBBTC['bidPrice']
                 }
                 possibeTriangle = {
