@@ -71,7 +71,6 @@ def triArb(client, beginningBalance, triangle, BNBBTC, ETHBTC):
     except BinanceAPIException as e:
         print("something broke")
         print(e)
-        shitcoinbalance = (client.get_asset_balance(asset=str(triangle['coin1'][:-3])))
         bnbbalance = client.get_asset_balance(asset='BNB')
         ethbalance = client.get_asset_balance(asset='ETH')
         if bnbbalance > 0.5:
