@@ -74,11 +74,6 @@ def triArb(client, beginningBalance, triangle, BNBBTC, ETHBTC):
         shitcoinbalance = (client.get_asset_balance(asset=str(triangle['coin1'][:-3])))
         bnbbalance = client.get_asset_balance(asset='BNB')
         ethbalance = client.get_asset_balance(asset='ETH')
-        if (shitcoinbalance*triangle['coin1Price']) > 0.003:
-            order = client.order_market_sell(
-                symbol=triangle['coin1'],
-                quantity=shitcoinbalance
-            )
         if bnbbalance > 0.5:
             order = client.order_market_sell(
                 symbol='BNBBTC',
