@@ -21,6 +21,9 @@ def triArb(client, beginningBalance, triangle, BNBBTC, ETHBTC):
     firstPair = triangle['coin1']
     firstQtyTheoretical = triangle['maxThru'] / triangle['coin1Price']
     firstQty = (math.floor(firstQtyTheoretical * (10**triangle['coin1Decimals']))/(10**triangle['coin1Decimals']))
+    if triangle['coin1Decimals'] == 0:
+        firstQty = int(firstQtyTheoretical)
+    print(firstQty)
     try:
 
         orderOne = client.order_limit_buy(
@@ -32,7 +35,7 @@ def triArb(client, beginningBalance, triangle, BNBBTC, ETHBTC):
         #market order sells:
 
         secondPair = triangle['coin2']
-        secondQtyTheoretical = orderOne['executedQty'] / 1.001
+        secondQtyTheoretical = float(orderOne['executedQty']) / 1.001
         secondQty = (math.floor(secondQtyTheoretical * (10**triangle['coin2Decimals']))/(10**triangle['coin2Decimals']))
         orderTwo = client.order_market_sell(
             symbol=secondPair,
@@ -40,7 +43,8 @@ def triArb(client, beginningBalance, triangle, BNBBTC, ETHBTC):
         )
 
         thirdPair = triangle['coin2'][-3:] + 'BTC'
-        thirdQtyTheoretical = orderTwo['executedQty'] / 1.001
+        #order 2 executed qty is expressed in coin2 terms (not number of BNB or ETH)
+        thirdQtyTheoretical = float(orderTwo['executedQty']) * triangle['coin2Price'] / 1.001
         if thirdPair == "BNBBTC":
             qty = (math.floor(thirdQtyTheoretical * 100)/100)
             orderThree = client.order_market_sell(

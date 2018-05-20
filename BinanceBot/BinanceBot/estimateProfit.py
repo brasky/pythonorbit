@@ -78,7 +78,8 @@ def estimateProfit(beginningBalance, BTCcoins, BNBcoins, ETHcoins, BNBBTC, ETHBT
                         "profit": thirdBalance['balance'],
                         "maxThru": min(firstBalance['maxThru'], secondBalance['maxThru'], thirdBalance['maxThru'])
                     }
-                    finalResult.append(triangle)
+                    if triangle['maxThru'] > minThru:
+                        finalResult.append(triangle)
         #eth coins
         for ethcoin in ETHcoins:
             if firstBalance['symbol'][:-3] == ethcoin['symbol'][:-3]:
