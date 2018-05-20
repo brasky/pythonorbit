@@ -65,7 +65,7 @@ def main():
         print(profitResult)
     if profitResult:
         for triangle in profitResult:
-            # triArb(client, beginningBalance, triangle, BNBBTC, ETHBTC)
+            triArb(client, beginningBalance, triangle, BNBBTC, ETHBTC)
             print("Triangle Found:")
             print("Coins:")
             print("BTC -> " + triangle['coin1'] + " -> " + triangle['coin2'])
@@ -79,8 +79,8 @@ def main():
         influxclient.write_points(profit)
     influxclient.write_points(latency)
 
-    #if profitResult['profit'] > minProfit:
-    #    triArb(profitResult)
+    # if profitResult['profit'] > minProfit:
+    #     triArb(profitResult)
 
 
 while True:
