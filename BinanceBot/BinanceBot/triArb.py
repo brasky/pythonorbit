@@ -32,7 +32,8 @@ def triArb(client, beginningBalance, triangle, BNBBTC, ETHBTC):
         orderOne = client.order_limit_buy(
             symbol=firstPair,
             quantity=firstQty,
-            price=price
+            price=price,
+            timeInForce='FOK'
         )
         print(orderOne)
         #market order sells:
