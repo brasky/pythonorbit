@@ -2,7 +2,7 @@ apiKey = "***REMOVED***"
 apiSecret = "***REMOVED***"
 #note that the minumum order size in binance is 0.001 btc
 minThru = 0.003
-minProfit = 1.00125
+minProfit = 1.00175
 dbport = 8086
 dbusername = "root"
 dbpassword = "root"
