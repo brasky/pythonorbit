@@ -76,7 +76,7 @@ def main():
             print(triangle['profit'])
             print("Max Through:")
             print(triangle['maxThru'])
-            quit()
+            
 
 
     for profit in profitPercentLog:
