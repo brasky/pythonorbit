@@ -53,9 +53,17 @@ def triArb(client, beginningBalance, triangle, BNBBTC, ETHBTC):
         #order 2 executed qty is expressed in coin2 terms (not number of BNB or ETH)
         #issue: if the coin2 price changes during execution, you will get a different number of BNB/ETH compared to executed qty
         thirdQtyTheoretical = float(orderTwo['executedQty']) * triangle['coin2Price'] / 1.001
+
         if thirdPair == "BNBBTC":
             qty = (math.floor(thirdQtyTheoretical * 100)/100)
             print("third qty is", qty)
+            print("---------DEBUG STATS:")
+            print(thirdPair)
+            print("order Two executed: ", orderTwo['executedQty'])
+            print("triangle coin 2 price: ", triangle['coin2Price'])
+            print("third theoretical: ", thirdQtyTheoretical)
+            print("qty :", qty)
+
             orderThree = client.order_market_sell(
                 symbol=thirdPair,
                 quantity=qty
@@ -64,6 +72,14 @@ def triArb(client, beginningBalance, triangle, BNBBTC, ETHBTC):
         if thirdPair == "ETHBTC":
             qty = (math.floor(thirdQtyTheoretical * 1000) / 1000)
             print("third qty is", qty)
+            print("---------DEBUG STATS:")
+            print(thirdPair)
+            print("order Two executed: ", orderTwo['executedQty'])
+            print("triangle coin 2 price: ", triangle['coin2Price'])
+            print("third theoretical: ", thirdQtyTheoretical)
+            print("qty :", qty)
+
+
             orderThree = client.order_market_sell(
                 symbol=thirdPair,
                 quantity=qty

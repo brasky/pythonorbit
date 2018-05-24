@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/BinanceBot/BinanceBot/orbit.py" line="74" mnemonic="4" />
+    <bookmark url="file://$PROJECT_DIR$/BinanceBot/BinanceBot/triArb.py" line="106" mnemonic="4" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28a34458-6534-40d5-ac3b-e2716a13380c" name="Default" comment="fixed try/except logic">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="28a34458-6534-40d5-ac3b-e2716a13380c" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/getMaxTriangle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pythonorbit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pythonorbit.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/BinanceBot/BinanceBot/orbit.py" beforeDir="false" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/orbit.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BinanceBot/BinanceBot/parameters.py" beforeDir="false" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/parameters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BinanceBot/BinanceBot/triArb.py" beforeDir="false" afterPath="$PROJECT_DIR$/BinanceBot/BinanceBot/triArb.py" afterDir="false" />
     </list>
     <ignored path="pythonorbit.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="orbit.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="orbit.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BinanceBot/BinanceBot/orbit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="42" column="6" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+            <state relative-caret-position="825">
+              <caret line="91" selection-start-line="91" selection-end-line="91" />
               <folding>
                 <element signature="e#20#38#0" expanded="true" />
               </folding>
@@ -38,11 +42,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="getMaxTriangle.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BinanceBot/BinanceBot/getMaxTriangle.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="triArb.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BinanceBot/BinanceBot/triArb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
+            <state relative-caret-position="961">
+              <caret line="73" column="38" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
               <folding>
                 <element signature="e#20#38#0" expanded="true" />
               </folding>
@@ -53,8 +66,8 @@
       <file leaf-file-name="estimateProfit.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BinanceBot/BinanceBot/estimateProfit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
-              <caret line="75" column="37" selection-start-line="75" selection-start-column="37" selection-end-line="75" selection-end-column="37" />
+            <state relative-caret-position="1696">
+              <caret line="123" column="54" lean-forward="true" selection-start-line="123" selection-start-column="54" selection-end-line="123" selection-end-column="54" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -62,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parameters.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="parameters.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BinanceBot/BinanceBot/parameters.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+              <caret line="4" column="19" selection-end-line="8" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -84,6 +97,7 @@
     <findStrings>
       <find>decimals': 2</find>
       <find>VENBNB</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -101,17 +115,18 @@
         <option value="$PROJECT_DIR$/BinanceBot/Misc Testing/Misc API Testing.py" />
         <option value="$PROJECT_DIR$/BinanceBot/BinanceBot/organizeCoins.py" />
         <option value="$PROJECT_DIR$/BinanceBot/BinanceBot/estimateProfit.py" />
+        <option value="$PROJECT_DIR$/BinanceBot/BinanceBot/getMaxTriangle.py" />
         <option value="$PROJECT_DIR$/BinanceBot/BinanceBot/triArb.py" />
-        <option value="$PROJECT_DIR$/BinanceBot/BinanceBot/parameters.py" />
         <option value="$PROJECT_DIR$/BinanceBot/BinanceBot/orbit.py" />
+        <option value="$PROJECT_DIR$/BinanceBot/BinanceBot/parameters.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="12" />
-    <option name="y" value="-46" />
-    <option name="width" value="1080" />
-    <option name="height" value="1888" />
+    <option name="x" value="1" />
+    <option name="y" value="25" />
+    <option name="width" value="2543" />
+    <option name="height" value="782" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -612,19 +627,25 @@
       <option name="project" value="LOCAL" />
       <updated>1526855740745</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="changed min profit and added a break to the profit loop so that it only tries 1 triangle per getTickers call.">
+      <created>1526867834394</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1526867834394</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="2493" height="1318" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49942857" visible="true" weight="0.098676294" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49942857" visible="true" weight="0.098676294" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.3291874" />
       <window_info anchor="bottom" id="Messages" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50020057" side_tool="true" weight="0.34176245" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.32781458" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="11" visible="true" weight="0.32781458" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32781458" />
       <window_info anchor="bottom" id="Python Console" order="0" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32950193" />
@@ -705,7 +726,8 @@
     <MESSAGE value="updated trading logic - added additional safety nets" />
     <MESSAGE value="changed except logic" />
     <MESSAGE value="another quick edit to except logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="another quick edit to except logic" />
+    <MESSAGE value="changed min profit and added a break to the profit loop so that it only tries 1 triangle per getTickers call." />
+    <option name="LAST_COMMIT_MESSAGE" value="changed min profit and added a break to the profit loop so that it only tries 1 triangle per getTickers call." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -714,29 +736,28 @@
           <url>file://$PROJECT_DIR$/BinanceBot/BinanceBot/backtestPuller.py</url>
           <line>1</line>
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/BinanceBot/BinanceBot/orbit.py</url>
+          <line>71</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/BinanceBot/BinanceBot/getMaxTriangle.py</url>
+          <line>3</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="1" />
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/BinanceBot/BinanceBot/parameters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BinanceBot/BinanceBot/orbit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="103" selection-start-line="103" selection-end-line="103" />
-          <folding>
-            <element signature="e#20#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BinanceBot/BinanceBot/BNB Scanner and Buyer.py" />
     <entry file="file://$PROJECT_DIR$/BinanceBot/BinanceBot/parameters.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -1009,10 +1030,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinanceBot/BinanceBot/getMaxTriangle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinanceBot/BinanceBot/triArb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="961">
+          <caret line="73" column="38" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
+          <folding>
+            <element signature="e#20#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinanceBot/BinanceBot/orbit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
+          <folding>
+            <element signature="e#20#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BinanceBot/BinanceBot/estimateProfit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="75" column="37" selection-start-line="75" selection-start-column="37" selection-end-line="75" selection-end-column="37" />
+        <state relative-caret-position="1696">
+          <caret line="123" column="54" lean-forward="true" selection-start-line="123" selection-start-column="54" selection-end-line="123" selection-end-column="54" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
@@ -1022,27 +1080,7 @@
     <entry file="file://$PROJECT_DIR$/BinanceBot/BinanceBot/parameters.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BinanceBot/BinanceBot/triArb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
-          <folding>
-            <element signature="e#20#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BinanceBot/BinanceBot/orbit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="42" column="6" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
-          <folding>
-            <element signature="e#20#38#0" expanded="true" />
-          </folding>
+          <caret line="4" column="19" selection-end-line="8" selection-end-column="24" />
         </state>
       </provider>
     </entry>

@@ -12,6 +12,7 @@ from organizeCoins import *
 from influxdb import InfluxDBClient
 from datetime import datetime
 from triArb import *
+from getMaxTriangle import *
 
 
 influxclient = InfluxDBClient('localhost', parameters.dbport, parameters.dbusername, parameters.dbpassword, parameters.dbname)
@@ -40,7 +41,8 @@ def main():
     ETHcoins = []
     BTCcoins = []
     baseCoins = []
-    # print(beginningBalance)
+    beginningBalance = getFreeBalance('BTC')
+    print(beginningBalance)
 
     start = time.time()
     tickers = getTickers()
@@ -61,10 +63,11 @@ def main():
         }
     ]
 
+    # if profitResult:
+    #     print(profitResult)
     if profitResult:
-        print(profitResult)
-    if profitResult:
-        for triangle in profitResult:
+        if end-start < 0.5:
+            triangle = getMaxTriangle(profitResult)
             triArb(client, beginningBalance, triangle, BNBBTC, ETHBTC)
             print("Triangle Found:")
             print("Coins:")
@@ -73,7 +76,7 @@ def main():
             print(triangle['profit'])
             print("Max Through:")
             print(triangle['maxThru'])
-            break
+            quit()
 
 
     for profit in profitPercentLog:
@@ -86,6 +89,7 @@ def main():
 
 while True:
     main()
+
 
 
 
