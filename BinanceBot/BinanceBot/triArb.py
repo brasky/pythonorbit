@@ -38,6 +38,9 @@ def triArb(client, beginningBalance, triangle, BNBBTC, ETHBTC):
         print(orderOne)
         #market order sells:
 
+        if orderOne['executedQty'] == 0:
+            print("Orderbook changed: order one not filled.")
+
         secondPair = triangle['coin2']
         secondQtyTheoretical = float(orderOne['executedQty']) / 1.001
         secondQty = (math.floor(secondQtyTheoretical * (10**triangle['coin2Decimals']))/(10**triangle['coin2Decimals']))
