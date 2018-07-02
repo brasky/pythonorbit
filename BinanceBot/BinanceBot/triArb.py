@@ -89,21 +89,21 @@ def triArb(client, beginningBalance, triangle, BNBBTC, ETHBTC):
             )
         print(orderThree)
     except BinanceAPIException as e:
-        print("something broke")
-        print(e)
-        bnbbalanceapi = client.get_asset_balance(asset='BNB')
-        ethbalanceapi = client.get_asset_balance(asset='ETH')
-        bnbbalance = (math.floor((float(bnbbalanceapi['free'])) * 100)/100)
-        ethbalance =(math.floor((float(ethbalanceapi['free'])) * 1000)/1000)
-        if bnbbalance > 0.5:
-            order = client.order_market_sell(
-                symbol='BNBBTC',
-                quantity=bnbbalance
-            )
-        if ethbalance > 0.05:
-            order = client.order_market_sell(
-                symbol='ETHBTC',
-                quantity=ethbalance
-            )
+        Debug(e, triangle, orderOne, orderTwo, orderThree)
+
+        # bnbbalanceapi = client.get_asset_balance(asset='BNB')
+        # ethbalanceapi = client.get_asset_balance(asset='ETH')
+        # bnbbalance = (math.floor((float(bnbbalanceapi['free'])) * 100)/100)
+        # ethbalance =(math.floor((float(ethbalanceapi['free'])) * 1000)/1000)
+        # if bnbbalance > 0.5:
+        #     order = client.order_market_sell(
+        #         symbol='BNBBTC',
+        #         quantity=bnbbalance
+        #     )
+        # if ethbalance > 0.05:
+        #     order = client.order_market_sell(
+        #         symbol='ETHBTC',
+        #         quantity=ethbalance
+        #     )
 
     print("done")
