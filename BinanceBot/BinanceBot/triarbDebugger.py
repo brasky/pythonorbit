@@ -40,4 +40,3 @@ def Debug(e, triangle, orderOne, orderTwo, orderThree):
                 "bidQty": float(coin['bidQty']),
                 "decimals": 3
             }
-            
