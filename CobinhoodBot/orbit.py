@@ -13,20 +13,38 @@ from organizeCoins import *
 from estimateProfit import *
 from cobinhood_api import Cobinhood
 cob = Cobinhood()
-print(cob.system.get_time())
+#print(cob.system.get_time())
 
 
 def getTickers():
     return cob.market.get_tickers()
+
+def getSize():
+    return cob.market.get_trading_pairs()
+
 def main():
     time.sleep(2)
     ETHcoins = []
     BTCcoins = []
 
-    data = getTickers()
-    tickers = data['result']['tickers']
-    BTCcoins, ETHcoins, ETHBTC = organizeCoins(tickers, BTCcoins, ETHcoins)
+    startAPI = time.time()
+    tickerdata = getTickers()
+    sizedata = getSize()
+    tickers = tickerdata['result']['tickers']
+    size = sizedata['result']['trading_pairs']
+    endAPI = time.time()
+    APItime = endAPI - startAPI
+    print("time to pull market data: ", APItime, "seconds")
+    startCalc = time.time()
+    BTCcoins, ETHcoins, ETHBTC = organizeCoins(tickers, size, BTCcoins, ETHcoins)
+    coinCount = len(ETHcoins) + len(BTCcoins)
     profitResult = estimateProfit(BTCcoins, ETHcoins, ETHBTC)
+    endCalc = time.time()
+    calcTime = endCalc - startCalc
+    print("time to calculate triangles on",coinCount,"coins:", calcTime, "seconds")
+
+
+
 
     # if profitResult:
     #     triangle = profitResult
@@ -38,3 +56,4 @@ def main():
 
 while True:
     main()
+
