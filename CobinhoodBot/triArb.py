@@ -10,8 +10,8 @@ def triarb(beginningBal, profitResult, ETHBTC):
     firstTicker = profitResult['coin1']
     secondTicker = profitResult['coin2']
     thirdTicker = 'ETH-BTC'
-    firstQty = min(beginningBal, profitResult['maxThru'])
-
+    firstQty = (min(beginningBal, profitResult['maxThru']))/profitResult['coin1Price']
+    #first Qty is in shitcoin terms
     orderOne = cob.trading.post_orders(
         trading_pair_id = firstTicker,
         side = 'ask',
@@ -22,7 +22,7 @@ def triarb(beginningBal, profitResult, ETHBTC):
     if orderOne['success'] == 'true':
         print("order one successful")
         executedQtyOne = float(orderOne['result']['order']['filled'])
-
+        #second Qty is also in shitcoin terms
         orderTwo = cob.trading.post_orders(
             trading_pair_id = secondTicker,
             side = 'bid',
@@ -36,6 +36,7 @@ def triarb(beginningBal, profitResult, ETHBTC):
         print("order two successful")
         executedQtyTwo = float(orderTwo['result']['order']['filled'])
         thirdQty = executedQtyTwo * profitResult['coin2Price']
+        #third Qty is in ETH terms
         orderThree = cob.trading.post_orders(
             trading_pair_id = thirdTicker,
             side = 'bid',
