@@ -12,7 +12,7 @@ import csv
 from organizeCoins import *
 from estimateProfit import *
 from cobinhood_api import Cobinhood
-cob = Cobinhood()
+cob = Cobinhood(API_TOKEN='***REMOVED***')
 #print(cob.system.get_time())
 
 
@@ -34,14 +34,14 @@ def main():
     size = sizedata['result']['trading_pairs']
     endAPI = time.time()
     APItime = endAPI - startAPI
-    print("time to pull market data: ", APItime, "seconds")
+    #print("time to pull market data: ", APItime, "seconds")
     startCalc = time.time()
     BTCcoins, ETHcoins, ETHBTC = organizeCoins(tickers, size, BTCcoins, ETHcoins)
     coinCount = len(ETHcoins) + len(BTCcoins)
     profitResult = estimateProfit(BTCcoins, ETHcoins, ETHBTC)
     endCalc = time.time()
     calcTime = endCalc - startCalc
-    print("time to calculate triangles on",coinCount,"coins:", calcTime, "seconds")
+    #print("time to calculate triangles on",coinCount,"coins:", calcTime, "seconds")
 
 
 
