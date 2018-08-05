@@ -27,7 +27,7 @@ def getSize():
 
 def getBal():
     balData = cob.wallet.get_balances()
-    return balData['result']['balances'][0]['btc_value']
+    return float(balData['result']['balances'][0]['btc_value'])
 
 
 def main():
@@ -58,6 +58,7 @@ def main():
 
         profit = endingBal - beginningBal
         print("profit in BTC terms:", profit)
+        quit()
 
 
     # if profitResult:

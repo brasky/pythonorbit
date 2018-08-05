@@ -1,20 +1,23 @@
 import time
 import csv
-from organizeCoins import *
-from estimateProfit import *
-from orbit import *
 from cobinhood_api import Cobinhood
 cob = Cobinhood(API_TOKEN='***REMOVED***')
 
-def triarb(beginningBal, profitResult, ETHBTC):
+def triArb(beginningBal, profitResult, ETHBTC):
+    print(profitResult)
     firstTicker = profitResult['coin1']
     secondTicker = profitResult['coin2']
     thirdTicker = 'ETH-BTC'
-    firstQty = (min(beginningBal, profitResult['maxThru']))/profitResult['coin1Price']
+    firstQty = (min(beginningBal, float(profitResult['maxThru'])))/float(profitResult['coin1Price'])
     #first Qty is in shitcoin terms
+    #print(firstQty)
+    if firstQty > 500:
+        firstQty = int(firstQty)
+    #print(firstQty)
+    #quit()
     orderOne = cob.trading.post_orders(
         trading_pair_id = firstTicker,
-        side = 'ask',
+        #side = 'ask',
         type = 'market',
         size = str(firstQty)
     )

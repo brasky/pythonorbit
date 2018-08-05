@@ -50,10 +50,10 @@ def estimateProfit(BTCcoins, ETHcoins, ETHBTC):
                             "profit": thirdBalance['balance'],
                             "maxThru": min(shitCoinbalance['maxThru'], secondBalance['maxThru'], thirdBalance['maxThru'])
                         }
-                        finalResult.append(triangle)
-                        print(triangle)
-                        entry = triangle
-                        wr.writerow(entry)
+                        # finalResult.append(triangle)
+                        # #print(triangle)
+                        # entry = triangle
+                        # wr.writerow(entry)
         #endTestTime = time.time()
         # print(endTestTime - testTime)
-        return finalResult
+                        return triangle
