@@ -11,27 +11,36 @@ import time
 import csv
 from organizeCoins import *
 from estimateProfit import *
+from triArb import *
 from cobinhood_api import Cobinhood
 cob = Cobinhood(API_TOKEN='***REMOVED***')
 #print(cob.system.get_time())
 
 
 def getTickers():
-    return cob.market.get_tickers()
+    tickerdata = cob.market.get_tickers()
+    return tickerdata['result']['tickers']
 
 def getSize():
-    return cob.market.get_trading_pairs()
+    sizedata = cob.market.get_trading_pairs()
+    return sizedata['result']['trading_pairs']
+
+def getBal():
+    balData = cob.wallet.get_balances()
+    return balData['result']['balances'][0]['btc_value']
+
 
 def main():
     time.sleep(2)
     ETHcoins = []
     BTCcoins = []
 
+
+    beginningBal = getBal()
+    print(beginningBal)
     startAPI = time.time()
-    tickerdata = getTickers()
-    sizedata = getSize()
-    tickers = tickerdata['result']['tickers']
-    size = sizedata['result']['trading_pairs']
+    tickers = getTickers()
+    size = getSize()
     endAPI = time.time()
     APItime = endAPI - startAPI
     #print("time to pull market data: ", APItime, "seconds")
@@ -43,7 +52,12 @@ def main():
     calcTime = endCalc - startCalc
     #print("time to calculate triangles on",coinCount,"coins:", calcTime, "seconds")
 
+    if profitResult:
+        print("triangle found")
+        endingBal = triArb(beginningBal, profitResult, ETHBTC)
 
+        profit = endingBal - beginningBal
+        print("profit in BTC terms:", profit)
 
 
     # if profitResult:
