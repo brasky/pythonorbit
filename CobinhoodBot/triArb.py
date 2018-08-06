@@ -15,37 +15,41 @@ def triArb(beginningBal, profitResult, ETHBTC):
         firstQty = int(firstQty)
     #print(firstQty)
     #quit()
-    orderOne = cob.trading.post_orders(
-        trading_pair_id = firstTicker,
-        #side = 'ask',
-        type = 'market',
-        size = str(firstQty)
-    )
+    orderOneData = {
+        "trading_pair_id": str(firstTicker),
+        "side": "bid",
+        "type": "market",
+        "size": str(firstQty)
+    }
+    orderOne = cob.trading.post_orders(orderOneData)
 
     if orderOne['success'] == 'true':
         print("order one successful")
         executedQtyOne = float(orderOne['result']['order']['filled'])
         #second Qty is also in shitcoin terms
-        orderTwo = cob.trading.post_orders(
-            trading_pair_id = secondTicker,
-            side = 'bid',
-            type = 'market',
-            size = str(executedQtyOne)
-        )
+        ordertwoData = {
+            "trading_pair_id": str(secondTicker),
+            "side": "ask",
+            "type": "market",
+            "size": str(firstQty)
+        }
+        orderTwo = cob.trading.post_orders(ordertwoData)
+
     else:
         print("order one not successful")
 
     if orderTwo['success'] == 'true':
         print("order two successful")
-        executedQtyTwo = float(orderTwo['result']['order']['filled'])
-        thirdQty = executedQtyTwo * profitResult['coin2Price']
+        thirdQty = firstQty * profitResult['coin2Price']
         #third Qty is in ETH terms
-        orderThree = cob.trading.post_orders(
-            trading_pair_id = thirdTicker,
-            side = 'bid',
-            type = 'market',
-            size = str(thirdQty)
-        )
+        orderthreeData = {
+            "trading_pair_id": 'ETH-BTC',
+            "side": "ask",
+            "type": "market",
+            "size": str(thirdQty)
+        }
+        orderThree = cob.trading.post_orders(orderthreeData)
+
     else:
         print("order two not successful")
 
@@ -76,3 +80,17 @@ def triArb(beginningBal, profitResult, ETHBTC):
     #     "profit": thirdBalance['balance'],
     #     "maxThru": min(shitCoinbalance['maxThru'], secondBalance['maxThru'], thirdBalance['maxThru'])
     # }
+
+
+
+# You need to post dict data to api function ex:
+#
+# # place order
+# data = {
+#     "trading_pair_id": "BTC-USDT",
+#     "side": "bid",
+#     "type": "limit",
+#     "price": "5000.01000000",
+#     "size": "1.0100"
+# }
+# cobinhood.trade.post_order(data)

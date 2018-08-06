@@ -35,7 +35,6 @@ def main():
     ETHcoins = []
     BTCcoins = []
 
-
     beginningBal = getBal()
     print(beginningBal)
     startAPI = time.time()
