@@ -46,22 +46,26 @@ def main():
     startCalc = time.time()
     BTCcoins, ETHcoins, ETHBTC = organizeCoins(tickers, size, BTCcoins, ETHcoins)
     coinCount = len(ETHcoins) + len(BTCcoins)
-    profitResult = estimateProfit(BTCcoins, ETHcoins, ETHBTC)
+    triangle = estimateProfit(BTCcoins, ETHcoins, ETHBTC)
     endCalc = time.time()
     calcTime = endCalc - startCalc
     #print("time to calculate triangles on",coinCount,"coins:", calcTime, "seconds")
 
-    if profitResult:
+    if triangle:
+        print("tickers:")
+        print(tickers)
+        print("calculated:")
+        print(triangle)
         print("triangle found")
-        endingBal = triArb(beginningBal, profitResult, ETHBTC)
+        endingBal = float(triArb(beginningBal, triangle, ETHBTC))
 
-        profit = endingBal - beginningBal
+        profit = float(endingBal) - float(beginningBal)
         print("profit in BTC terms:", profit)
         quit()
 
 
-    # if profitResult:
-    #     triangle = profitResult
+    # if triangle:
+    #     triangle = triangle
     #     print("Triangle Found:")
     #     print("Coins:")
     #     print("BTC -> " + triangle['coin1'] + " -> " + triangle['coin2'])

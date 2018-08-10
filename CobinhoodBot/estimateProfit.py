@@ -38,22 +38,23 @@ def estimateProfit(BTCcoins, ETHcoins, ETHBTC):
                     #print(secondBalance)
                     thirdBalance = {
                         "balance": secondBalance['balance'] * ETHBTC['bidPrice'],
-                        "maxThru": ETHBTC['minVolume'] * ETHBTC['bidPrice']
+                        "maxThru": (ETHBTC['minVolume'] * ETHBTC['bidPrice'])*1.5
                     }
                     if thirdBalance['balance'] > minProfit:
-
+#manually overwriting the ETH minimum throughput for volatility concerns.
                         triangle = {
                             "coin1": shitCoinbalance['symbol'],
                             "coin1Price": shitCoinbalance['askPrice'],
                             "coin2": secondBalance['symbol'],
                             "coin2Price": ethcoin['bidPrice'],
                             "profit": thirdBalance['balance'],
-                            "maxThru": min(shitCoinbalance['maxThru'], secondBalance['maxThru'], thirdBalance['maxThru'])
+                            "maxThru": min(shitCoinbalance['maxThru'], secondBalance['maxThru'])
                         }
                         # finalResult.append(triangle)
                         # #print(triangle)
                         # entry = triangle
                         # wr.writerow(entry)
+                        if triangle['maxThru'] >= .005:
         #endTestTime = time.time()
         # print(endTestTime - testTime)
-                        return triangle
+                            return triangle
