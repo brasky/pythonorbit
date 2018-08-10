@@ -26,4 +26,12 @@ def organizeCoins(tickers, size, BTCcoins, ETHcoins):
                         "bidPrice": float(coin['highest_bid']),
                         "minVolume": float(minSize['base_min_size'])
                         }
-    return(BTCcoins, ETHcoins, ETHBTC)
+                if coin['trading_pair_id'] == "BTC-USDT":
+                    USDT = {
+                        "symbol": coin['trading_pair_id'],
+                        "askPrice": float(coin['lowest_ask']),
+                        "bidPrice": float(coin['highest_bid']),
+                        "minVolume": float(minSize['base_min_size'])
+                    }
+
+    return(BTCcoins, ETHcoins, ETHBTC, USDT)

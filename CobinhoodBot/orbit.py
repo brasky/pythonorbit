@@ -44,9 +44,9 @@ def main():
     APItime = endAPI - startAPI
     #print("time to pull market data: ", APItime, "seconds")
     startCalc = time.time()
-    BTCcoins, ETHcoins, ETHBTC = organizeCoins(tickers, size, BTCcoins, ETHcoins)
+    BTCcoins, ETHcoins, ETHBTC, USDT = organizeCoins(tickers, size, BTCcoins, ETHcoins)
     coinCount = len(ETHcoins) + len(BTCcoins)
-    triangle = estimateProfit(BTCcoins, ETHcoins, ETHBTC)
+    triangle = estimateProfit(BTCcoins, ETHcoins, ETHBTC, USDT)
     endCalc = time.time()
     calcTime = endCalc - startCalc
     #print("time to calculate triangles on",coinCount,"coins:", calcTime, "seconds")

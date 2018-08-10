@@ -1,4 +1,4 @@
-def estimateProfit(BTCcoins, ETHcoins, ETHBTC):
+def estimateProfit(BTCcoins, ETHcoins, ETHBTC, USDT):
     with open("testing.csv", "w") as result:
         import csv
         wr = csv.writer(result, dialect='excel', delimiter=',')
@@ -7,6 +7,9 @@ def estimateProfit(BTCcoins, ETHcoins, ETHBTC):
         #logTime = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
         minProfit = 1
         #testTime = time.time()
+        #the minimum BTC qty is $25 worth of BTC for our purposes
+        minBTCqty = 25 / USDT['bidPrice']
+        print(minBTCqty)
         for coin in BTCcoins:
             symbol = coin['symbol']
             balance = 1.00 / (coin['askPrice'])
@@ -54,7 +57,7 @@ def estimateProfit(BTCcoins, ETHcoins, ETHBTC):
                         # #print(triangle)
                         # entry = triangle
                         # wr.writerow(entry)
-                        if triangle['maxThru'] >= .005:
+                        if triangle['maxThru'] >= minBTCqty:
         #endTestTime = time.time()
         # print(endTestTime - testTime)
                             return triangle
