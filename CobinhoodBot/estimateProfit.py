@@ -41,7 +41,7 @@ def estimateProfit(BTCcoins, ETHcoins, ETHBTC, USDT):
                     #print(secondBalance)
                     thirdBalance = {
                         "balance": secondBalance['balance'] * ETHBTC['bidPrice'],
-                        "maxThru": (ETHBTC['minVolume'] * ETHBTC['bidPrice'])*1.5
+                        "maxThru": (ETHBTC['minVolume'] * ETHBTC['bidPrice'])
                     }
                     if thirdBalance['balance'] > minProfit:
 #manually overwriting the ETH minimum throughput for volatility concerns.
