@@ -37,20 +37,11 @@ def main():
 
     beginningBal = getBal()
     print(beginningBal)
-    startAPI = time.time()
+
     tickers = getTickers()
     size = getSize()
-    endAPI = time.time()
-    APItime = endAPI - startAPI
-    #print("time to pull market data: ", APItime, "seconds")
-    startCalc = time.time()
     BTCcoins, ETHcoins, ETHBTC, USDT = organizeCoins(tickers, size, BTCcoins, ETHcoins)
-    coinCount = len(ETHcoins) + len(BTCcoins)
     triangle = estimateProfit(BTCcoins, ETHcoins, ETHBTC, USDT)
-    endCalc = time.time()
-    calcTime = endCalc - startCalc
-    #print("time to calculate triangles on",coinCount,"coins:", calcTime, "seconds")
-
     if triangle:
         print("tickers:")
         print(tickers)
@@ -58,7 +49,6 @@ def main():
         print(triangle)
         print("triangle found")
         endingBal = float(triArb(beginningBal, triangle, ETHBTC))
-
         profit = float(endingBal) - float(beginningBal)
         print("profit in BTC terms:", profit)
         quit()
