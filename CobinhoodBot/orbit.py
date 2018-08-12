@@ -36,7 +36,7 @@ def main():
     BTCcoins = []
 
     beginningBal = getBal()
-    print(beginningBal)
+    #print(beginningBal)
 
     tickers = getTickers()
     size = getSize()

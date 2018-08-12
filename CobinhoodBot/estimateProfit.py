@@ -3,10 +3,10 @@ def estimateProfit(BTCcoins, ETHcoins, ETHBTC, USDT):
     start = time.time()
     trianglesCalculated = []
     allcalculations = []
-    minProfit = 1
+    minProfit = 1.01
     #the minimum BTC qty is $25 worth of BTC for our purposes
-    minBTCqty = 25 / USDT['bidPrice']
-    print(minBTCqty)
+    minBTCqty = 0.06 * ETHBTC['askPrice']
+    print('minimum order in BTC terms is', minBTCqty)
     #start by calculating triangles in the direction of altcoin -> ETH
     for coin in BTCcoins:
         symbol = coin['symbol']
@@ -55,29 +55,29 @@ def estimateProfit(BTCcoins, ETHcoins, ETHBTC, USDT):
                     trianglesCalculated.append(triangle)
                     print(triangle)
     #now, calculate all opportunities starting with ETH -> Altcoin
-    for ethcoin in ETHcoins:
-        symbol = ethcoin['symbol']
-        maxThruEthcoin = ethcoin['minVolume'] * ethcoin['bidPrice'] / ETHBTC['askPrice']
-        maxThruETHBTC = (ETHBTC['minVolume'] * ETHBTC['bidPrice'])
-        #can calculate first and second balance in one line
-        balance = (float(1 / ETHBTC['askPrice']) / ethcoin['askPrice'])
-        for coin in BTCcoins:
-            if coin['symbol'][:-4] == symbol[:-4]:
-                thirdBalance = balance * coin['bidPrice']
-                allcalculations.append(thirdBalance)
-                maxThruCoin = coin['minVolume'] * coin['bidPrice']
-                maxThru = min(maxThruETHBTC, maxThruEthcoin, maxThruCoin)
-                if thirdBalance > minProfit:
-                    triangle = {
-                        "coin1": ETHBTC['symbol'],
-                        "coin1Price": ETHBTC['askPrice'],
-                        "coin2": symbol,
-                        "coin2Price": ethcoin['askPrice'],
-                        "profit": thirdBalance,
-                        "maxThru": maxThru
-                    }
-                    trianglesCalculated.append(triangle)
-                    print(triangle)
+    # for ethcoin in ETHcoins:
+    #     symbol = ethcoin['symbol']
+    #     maxThruEthcoin = ethcoin['minVolume'] * ethcoin['bidPrice'] / ETHBTC['askPrice']
+    #     maxThruETHBTC = (ETHBTC['minVolume'] * ETHBTC['bidPrice'])
+    #     #can calculate first and second balance in one line
+    #     balance = (float(1 / ETHBTC['askPrice']) / ethcoin['askPrice'])
+    #     for coin in BTCcoins:
+    #         if coin['symbol'][:-4] == symbol[:-4]:
+    #             thirdBalance = balance * coin['bidPrice']
+    #             allcalculations.append(thirdBalance)
+    #             maxThruCoin = coin['minVolume'] * coin['bidPrice']
+    #             maxThru = min(maxThruETHBTC, maxThruEthcoin, maxThruCoin)
+    #             if thirdBalance > minProfit:
+    #                 triangle = {
+    #                     "coin1": ETHBTC['symbol'],
+    #                     "coin1Price": ETHBTC['askPrice'],
+    #                     "coin2": symbol,
+    #                     "coin2Price": ethcoin['askPrice'],
+    #                     "profit": thirdBalance,
+    #                     "maxThru": maxThru
+    #                 }
+    #                 trianglesCalculated.append(triangle)
+    #                 print(triangle)
     end = time.time()
     calctime = end - start
     print('time to calculate', len(allcalculations), 'opportunities', calctime, 'seconds')
