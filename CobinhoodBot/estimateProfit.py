@@ -9,20 +9,21 @@ def estimateProfit(BTCcoins, ETHcoins, ETHBTC, USDT):
     print('minimum order in BTC terms is', minBTCqty)
     #start by calculating triangles in the direction of altcoin -> ETH
     for coin in BTCcoins:
-        symbol = coin['symbol']
-        balance = 1.00 / (coin['askPrice'])
-        maxThru = coin['minVolume'] * coin['askPrice']
-        # shitCoinbalance is the balance the shitcoin:
-        shitCoinbalance = {
-            "symbol": symbol,
-            "askPrice": coin['askPrice'],
-            "bidPrice": coin['bidPrice'],
-            "balance": balance,
-            "maxThru": maxThru,
-            #"decimals": coin['decimals']
-        }
-        #print(shitCoinbalance['symbol'][:-4])
-        #eth coins
+        if coin['askPrice'] != 0 and coin['bidPrice'] != 0:
+            symbol = coin['symbol']
+            balance = 1.00 / float((coin['askPrice']))
+            maxThru = coin['minVolume'] * coin['askPrice']
+            # shitCoinbalance is the balance the shitcoin:
+            shitCoinbalance = {
+                "symbol": symbol,
+                "askPrice": coin['askPrice'],
+                "bidPrice": coin['bidPrice'],
+                "balance": balance,
+                "maxThru": maxThru,
+                #"decimals": coin['decimals']
+            }
+            #print(shitCoinbalance['symbol'][:-4])
+            #eth coins
         for ethcoin in ETHcoins:
             #print(ethcoin)
             if shitCoinbalance['symbol'][:-4] == ethcoin['symbol'][:-4]:
