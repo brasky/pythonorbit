@@ -24,37 +24,37 @@ def estimateProfit(BTCcoins, ETHcoins, ETHBTC, USDT):
             }
             #print(shitCoinbalance['symbol'][:-4])
             #eth coins
-        for ethcoin in ETHcoins:
-            #print(ethcoin)
-            if shitCoinbalance['symbol'][:-4] == ethcoin['symbol'][:-4]:
-                symbol = ethcoin['symbol']
-                balance = shitCoinbalance['balance'] * ethcoin['bidPrice']
-                #maxThru = ethcoin['minVolume'] * ethcoin['bidPrice']
-                maxThru = ethcoin['minVolume'] * ethcoin['bidPrice'] / ETHBTC['askPrice']
-                #balance of eth: NOTE: dividing by the ETHBTC ask price brings it to BTC terms
-                secondBalance = {
-                    "symbol": symbol,
-                    "balance": balance,
-                    "maxThru": maxThru,
-                    #"decimals": ethcoin['decimals']
-                }
-                #print(secondBalance)
-                thirdBalance = {
-                    "balance": secondBalance['balance'] * ETHBTC['bidPrice'],
-                    "maxThru": (ETHBTC['minVolume'] * ETHBTC['bidPrice'])
-                }
-                allcalculations.append(thirdBalance)
-                if thirdBalance['balance'] > minProfit:
-                    triangle = {
-                        "coin1": shitCoinbalance['symbol'],
-                        "coin1Price": shitCoinbalance['askPrice'],
-                        "coin2": secondBalance['symbol'],
-                        "coin2Price": ethcoin['bidPrice'],
-                        "profit": thirdBalance['balance'],
-                        "maxThru": min(shitCoinbalance['maxThru'], secondBalance['maxThru'])
+            for ethcoin in ETHcoins:
+                #print(ethcoin)
+                if shitCoinbalance['symbol'][:-4] == ethcoin['symbol'][:-4]:
+                    symbol = ethcoin['symbol']
+                    balance = shitCoinbalance['balance'] * ethcoin['bidPrice']
+                    #maxThru = ethcoin['minVolume'] * ethcoin['bidPrice']
+                    maxThru = ethcoin['minVolume'] * ethcoin['bidPrice'] / ETHBTC['askPrice']
+                    #balance of eth: NOTE: dividing by the ETHBTC ask price brings it to BTC terms
+                    secondBalance = {
+                        "symbol": symbol,
+                        "balance": balance,
+                        "maxThru": maxThru,
+                        #"decimals": ethcoin['decimals']
                     }
-                    trianglesCalculated.append(triangle)
-                    print(triangle)
+                    #print(secondBalance)
+                    thirdBalance = {
+                        "balance": secondBalance['balance'] * ETHBTC['bidPrice'],
+                        "maxThru": (ETHBTC['minVolume'] * ETHBTC['bidPrice'])
+                    }
+                    allcalculations.append(thirdBalance)
+                    if thirdBalance['balance'] > minProfit:
+                        triangle = {
+                            "coin1": shitCoinbalance['symbol'],
+                            "coin1Price": shitCoinbalance['askPrice'],
+                            "coin2": secondBalance['symbol'],
+                            "coin2Price": ethcoin['bidPrice'],
+                            "profit": thirdBalance['balance'],
+                            "maxThru": min(shitCoinbalance['maxThru'], secondBalance['maxThru'])
+                        }
+                        trianglesCalculated.append(triangle)
+                        print(triangle)
     #now, calculate all opportunities starting with ETH -> Altcoin
     # for ethcoin in ETHcoins:
     #     symbol = ethcoin['symbol']
@@ -83,7 +83,8 @@ def estimateProfit(BTCcoins, ETHcoins, ETHBTC, USDT):
     calctime = end - start
     print('time to calculate', len(allcalculations), 'opportunities', calctime, 'seconds')
     #now see if there are any executable opportunities - if so, push them to the other module
-
+    highestTriangle = sorted(allcalculations, key=lambda k: k['balance'])[-1]
+    print('highest profitability ratio is :', highestTriangle['balance'])
     for triangle in trianglesCalculated:
         if triangle['maxThru'] >= minBTCqty:
             return triangle
