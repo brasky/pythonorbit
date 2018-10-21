@@ -1,5 +1,6 @@
 import time
 import csv
+from triangleLogger import *
 from cobinhood_api import Cobinhood
 cob = Cobinhood(API_TOKEN='***REMOVED***')
 
@@ -22,6 +23,7 @@ def triArb(beginningBal, triangle, ETHBTC):
         "size": str(firstQty)
     }
     orderOne = cob.trading.post_orders(orderOneData)
+    print(logTrade(orderOne))
 
     # if orderOne:
     #     if orderOne['success'] == 'true':
@@ -35,6 +37,7 @@ def triArb(beginningBal, triangle, ETHBTC):
         "size": str(firstQty)
     }
     orderTwo = cob.trading.post_orders(ordertwoData)
+    print(logTrade(orderTwo))
 
         # else:
         #     print("order one not successful")
@@ -51,6 +54,7 @@ def triArb(beginningBal, triangle, ETHBTC):
         "size": str(thirdQty)
     }
     orderThree = cob.trading.post_orders(orderthreeData)
+    print(logTrade(orderThree))
 
     #     else:
     #         print("order two not successful")

@@ -50,9 +50,9 @@ def main():
         print("calculated:")
         print(triangle)
         print("triangle found")
-        #endingBal = float(triArb(beginningBal, triangle, ETHBTC))
-        #profit = float(endingBal) - float(beginningBal)
-        #print("profit in BTC terms:", profit)
+        endingBal = float(triArb(beginningBal, triangle, ETHBTC))
+        profit = float(endingBal) - float(beginningBal)
+        print("profit in BTC terms:", profit)
 
 
     # if triangle:
