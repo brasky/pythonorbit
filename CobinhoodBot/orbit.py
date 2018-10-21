@@ -8,6 +8,7 @@ from setuptools import setup
 #       install_requires=['requests', 'websocket-client', 'coloredlogs'],
 #       zip_safe=False)
 import time
+from triangleLogger import *
 import csv
 from organizeCoins import *
 from estimateProfit import *
@@ -37,21 +38,21 @@ def main():
 
     beginningBal = getBal()
     #print(beginningBal)
-
+    startAPItime = time.time()
     tickers = getTickers()
     size = getSize()
+    endAPItime = time.time()
+    print('API time: ', endAPItime - startAPItime, 'seconds')
     BTCcoins, ETHcoins, ETHBTC, USDT = organizeCoins(tickers, size, BTCcoins, ETHcoins)
     triangle = estimateProfit(BTCcoins, ETHcoins, ETHBTC, USDT)
     if triangle:
-        print("tickers:")
-        print(tickers)
+        print(logTriangle(triangle))
         print("calculated:")
         print(triangle)
         print("triangle found")
         #endingBal = float(triArb(beginningBal, triangle, ETHBTC))
-        profit = float(endingBal) - float(beginningBal)
-        print("profit in BTC terms:", profit)
-        quit()
+        #profit = float(endingBal) - float(beginningBal)
+        #print("profit in BTC terms:", profit)
 
 
     # if triangle:
