@@ -1,0 +1,5 @@
+cobinhood_api
+cobinhood
+setuptools
+influxdb
+
