@@ -35,6 +35,7 @@ def main():
     time.sleep(2)
     ETHcoins = []
     BTCcoins = []
+    USDT = []
 
     beginningBal = getBal()
     #print(beginningBal)
@@ -43,7 +44,7 @@ def main():
     size = getSize()
     endAPItime = time.time()
     print('API time: ', endAPItime - startAPItime, 'seconds')
-    BTCcoins, ETHcoins, ETHBTC, USDT = organizeCoins(tickers, size, BTCcoins, ETHcoins)
+    BTCcoins, ETHcoins, ETHBTC, USDT = organizeCoins(tickers, size, BTCcoins, ETHcoins, USDT)
     triangle = estimateProfit(BTCcoins, ETHcoins, ETHBTC, USDT)
     if triangle:
         print(logTriangle(triangle))

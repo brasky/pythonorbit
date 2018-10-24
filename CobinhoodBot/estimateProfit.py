@@ -5,7 +5,13 @@ def estimateProfit(BTCcoins, ETHcoins, ETHBTC, USDT):
     allcalculations = []
     minProfit = 1.01
     #the minimum BTC qty is $25 worth of BTC for our purposes
-    minBTCqty = 0.06 * ETHBTC['askPrice']
+    #the actual minimum is $20
+    #this should be $25 of ETH times the ETHBTC ask price
+    for coin in USDT:
+        if str(coin['symbol']) == str("ETH-USDT"):
+            twentyFiveDollarsofETH = 25 / coin['bidPrice']
+            #print(twentyFiveDollarsofETH)
+            minBTCqty = twentyFiveDollarsofETH * ETHBTC['askPrice']
     print('minimum order in BTC terms is', minBTCqty)
     #start by calculating triangles in the direction of altcoin -> ETH
     for coin in BTCcoins:
