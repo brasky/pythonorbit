@@ -23,14 +23,22 @@ def triArb(beginningBal, triangle, ETHBTC):
         "size": str(firstQty)
     }
     orderOne = cob.trading.post_orders(orderOneData)
-    try:
-        while orderOne['result']['order']['state'] != 'filled':
-            orderOne = cob.trading.get_orders_trades(orderOne['result']['order']['id'])
-        print(logTrade(orderOne))
-    except KeyError:
-        print("Order object did not have result key")
-
-    # if orderOne:
+    while True:
+        try:
+            if orderOne['result']['order']['state'] == 'filled':
+                print(logTrade(orderOne))
+                break
+            else:
+                orderOne = cob.trading.get_orders_trades(orderOne['result']['order']['id'])
+        except KeyError:
+            if orderOne['success']:
+                print("Order object did not have result key yet")
+            
+                orderOne = cob.trading.get_orders_trades(orderOne['result']['order']['id'])
+                pass
+            else:
+                print("order was not successful: " + orderOne['error']['error_code'])
+                return ''
     #     if orderOne['success'] == 'true':
     #         print("order one successful")
     #         executedQtyOne = float(orderOne['result']['order']['filled'])
@@ -42,12 +50,18 @@ def triArb(beginningBal, triangle, ETHBTC):
         "size": str(firstQty)
     }
     orderTwo = cob.trading.post_orders(ordertwoData)
-    try:
-        while orderTwo['result']['order']['state'] != 'filled':
+    while True:
+        try:
+            if orderTwo['result']['order']['state'] == 'filled':
+                print(logTrade(orderTwo))
+                break
+            else:
+                orderTwo = cob.trading.get_orders_trades(orderTwo['result']['order']['id'])
+        except KeyError:
+            print("Order object did not have result key yet")
             orderTwo = cob.trading.get_orders_trades(orderTwo['result']['order']['id'])
-        print(logTrade(orderTwo))
-    except KeyError:
-        print("Order object did not have result key")
+            pass
+	 
 
         # else:
         #     print("order one not successful")
@@ -64,17 +78,18 @@ def triArb(beginningBal, triangle, ETHBTC):
         "size": str(thirdQty)
     }
     orderThree = cob.trading.post_orders(orderthreeData)
-
-    try:
-        while orderThree['result']['order']['state'] != 'filled':
+    while True:
+        try:
+            if orderThree['result']['order']['state'] == 'filled':
+                print(logTrade(orderThree))
+                break
+            else:
+                orderThree = cob.trading.get_orders_trades(orderThree['result']['order']['id'])
+        except KeyError:
+            print("Order object did not have result key yet")
             orderThree = cob.trading.get_orders_trades(orderThree['result']['order']['id'])
-        print(logTrade(orderThree))
-    except KeyError:
-        print("Order object did not have result key")
-
-
-
-    #     else:
+            pass
+ #     else:
     #         print("order two not successful")
     #
     # if orderThree['success'] == 'true':
