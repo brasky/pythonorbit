@@ -1,0 +1,24 @@
+This file will provide an overview of the steps needed to take Orbit to the next level.
+Currently the biggest barrier between Orbit and profitable, executable arbitrage conditions is a lack of liquidity in the order books.
+This can be remedied by simply injecting the missing liquidity, (likely) taking a loss on the small liquidity added but earning profit
+on the overall triangle.
+
+I am also curious if there are situations where a small bid/ask order is ever standing in the way of a potential triangle, especially on
+lower volume coins. In that case Orbit could do the exact opposite of inject liquity - take liquidity away if it's standing in the way,
+to raise or lower the bid/ask.
+
+In practice, the following framework would have to be implemented:
+
+I will start with the biggest structural change - right now Orbit only looks at the lowest Ask and highest Bid (and the corresponding depths).
+Instead, Orbit needs to be looking at the entire order book (web sockets?). 
+
+Seeing the entire orderbook would make it possible to calculate the shortest path to arbitrage for any combination of three coins. You
+could even calculate how much liquidity would need to be added/removed to force an arbitrage condition to be true. 
+
+To reduce the heavy lifting, any triangle with a profitability under 0.95 (number subject to change) should be thrown away.
+
+For the remaining triangles, calculate the shortest path to arbitrage and determine exactly where exactly the orderbook needs to go in
+order for Orbit to execute successfully. 
+
+Let's start here, and once we get to this point, move on to the next phase (Orbit would calculate whether it's possible/feasible/profitable
+to force an arbitrage condition to be true.
