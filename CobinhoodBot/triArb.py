@@ -2,7 +2,7 @@ import time
 import csv
 from triangleLogger import *
 from cobinhood_api import Cobinhood
-cob = Cobinhood(API_TOKEN='***REMOVED***')
+cob = Cobinhood(API_TOKEN='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfdG9rZW5faWQiOiIwYzhjZjlkMy0xMDFjLTQ2YzktOGY0YS00YzZlZDM2MDYzNWUiLCJzY29wZSI6WyJzY29wZV9leGNoYW5nZV90cmFkZV9yZWFkIiwic2NvcGVfZXhjaGFuZ2VfdHJhZGVfd3JpdGUiLCJzY29wZV9leGNoYW5nZV9sZWRnZXJfcmVhZCJdLCJ1c2VyX2lkIjoiZDM2NWVmOGMtZDc3NC00OTJjLWFjZGEtYzAxNjg5NjNiMDgyIn0.9OStpMO2sZOGig8W_drZccok7ZwBuJQ8HOEnRu5msbA.V2:da662530738b0f92ae51f40827db80188ec1d3ba0ece50f701c72b40b3ee24e5')
 
 def triArb(beginningBal, triangle, ETHBTC):
     print(triangle)

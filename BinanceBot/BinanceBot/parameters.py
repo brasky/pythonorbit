@@ -1,5 +1,5 @@
-apiKey = "***REMOVED***"
-apiSecret = "***REMOVED***"
+apiKey = ""
+apiSecret = ""
 #note that the minumum order size in binance is 0.001 btc
 minThru = 0.002
 minProfit = 1.00125

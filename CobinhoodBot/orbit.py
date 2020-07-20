@@ -14,7 +14,7 @@ from organizeCoins import *
 from estimateProfit import *
 from triArb import *
 from cobinhood_api import Cobinhood
-cob = Cobinhood(API_TOKEN='***REMOVED***')
+cob = Cobinhood(API_TOKEN='')
 #print(cob.system.get_time())
 
 
